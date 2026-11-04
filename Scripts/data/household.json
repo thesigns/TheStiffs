@@ -1,0 +1,36 @@
+{
+  "_opis": "Losowe wyposażenie mieszkania w bloku, marzec 1990. Każda pozycja losowana osobno: szansa w %, ilość z przedziału.",
+  "mieszkanie": [
+    {"przedmiot": "noz_kuchenny", "szansa": 95, "ilosc": [1, 1]},
+    {"przedmiot": "zapalki", "szansa": 95, "ilosc": [1, 3]},
+    {"przedmiot": "racja", "szansa": 90, "ilosc": [1, 4]},
+    {"przedmiot": "woda", "szansa": 100, "ilosc": [2, 6]},
+    {"przedmiot": "konserwa", "szansa": 75, "ilosc": [1, 4]},
+    {"przedmiot": "swiece", "szansa": 70, "ilosc": [1, 1]},
+    {"przedmiot": "srubokret", "szansa": 70, "ilosc": [1, 1]},
+    {"przedmiot": "mlotek", "szansa": 60, "ilosc": [1, 1]},
+    {"przedmiot": "wodka", "szansa": 60, "ilosc": [1, 2]},
+    {"przedmiot": "papierosy", "szansa": 55, "ilosc": [1, 4]},
+    {"przedmiot": "sznur", "szansa": 50, "ilosc": [1, 1]},
+    {"przedmiot": "ocet", "szansa": 50, "ilosc": [1, 1]},
+    {"przedmiot": "radio", "szansa": 50, "ilosc": [1, 1]},
+    {"przedmiot": "latarka", "szansa": 45, "ilosc": [1, 1]},
+    {"przedmiot": "baterie", "szansa": 40, "ilosc": [1, 4]},
+    {"przedmiot": "bandaz", "szansa": 40, "ilosc": [1, 2]},
+    {"przedmiot": "woda_utleniona", "szansa": 40, "ilosc": [1, 1]},
+    {"przedmiot": "gwozdzie", "szansa": 35, "ilosc": [1, 1]},
+    {"przedmiot": "spirytus", "szansa": 25, "ilosc": [1, 1]},
+    {"przedmiot": "plan_warszawy", "szansa": 40, "ilosc": [1, 1]},
+    {"przedmiot": "dolary", "szansa": 30, "ilosc": [5, 100]},
+    {"przedmiot": "siekiera", "szansa": 15, "ilosc": [1, 1]},
+    {"przedmiot": "apteczka", "szansa": 15, "ilosc": [1, 1]},
+    {"przedmiot": "poradnik_pp", "szansa": 15, "ilosc": [1, 1]},
+    {"przedmiot": "lom", "szansa": 10, "ilosc": [1, 1]}
+  ],
+  "przy_sobie": [
+    {"przedmiot": "dowod", "szansa": 100, "ilosc": [1, 1]},
+    {"przedmiot": "klucze_dom", "szansa": 100, "ilosc": [1, 1]},
+    {"przedmiot": "zlote", "szansa": 100, "ilosc": [20000, 300000], "krok": 1000},
+    {"przedmiot": "zapalki", "szansa": 40, "ilosc": [1, 1]}
+  ]
+}

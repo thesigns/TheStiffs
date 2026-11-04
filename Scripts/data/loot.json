@@ -1,0 +1,143 @@
+{
+  "_opis": "Łup według typu miejsca (typ węzła). splądrowanie: bazowy stopień splądrowania w dniu apokalipsy (rośnie o 3 dziennie i o 25 z każdym przeszukaniem). Każdy udany rzut łupu losuje pozycję wg wagi i ilość z przedziału.",
+  "mieszkanie": {"splądrowanie": 0, "lup": [
+    {"przedmiot": "racja", "waga": 10, "ilosc": [1, 3]},
+    {"przedmiot": "konserwa", "waga": 8, "ilosc": [1, 3]},
+    {"przedmiot": "woda", "waga": 8, "ilosc": [1, 4]},
+    {"przedmiot": "wodka", "waga": 5, "ilosc": [1, 1]},
+    {"przedmiot": "papierosy", "waga": 5, "ilosc": [1, 2]},
+    {"przedmiot": "swiece", "waga": 5, "ilosc": [1, 1]},
+    {"przedmiot": "zapalki", "waga": 5, "ilosc": [1, 2]},
+    {"przedmiot": "noz_kuchenny", "waga": 4, "ilosc": [1, 1]},
+    {"przedmiot": "bandaz", "waga": 4, "ilosc": [1, 2]},
+    {"przedmiot": "woda_utleniona", "waga": 3, "ilosc": [1, 1]},
+    {"przedmiot": "polopiryna", "waga": 4, "ilosc": [1, 2]},
+    {"przedmiot": "latarka", "waga": 3, "ilosc": [1, 1]},
+    {"przedmiot": "baterie", "waga": 3, "ilosc": [1, 4]},
+    {"przedmiot": "srubokret", "waga": 3, "ilosc": [1, 1]},
+    {"przedmiot": "mlotek", "waga": 3, "ilosc": [1, 1]},
+    {"przedmiot": "sznur", "waga": 3, "ilosc": [1, 1]},
+    {"przedmiot": "dolary", "waga": 2, "ilosc": [5, 50]},
+    {"przedmiot": "spirytus", "waga": 2, "ilosc": [1, 1]},
+    {"przedmiot": "poradnik_pp", "waga": 1, "ilosc": [1, 1]},
+    {"przedmiot": "siekiera", "waga": 1, "ilosc": [1, 1]}
+  ]},
+  "blok": {"splądrowanie": 30, "lup": [
+    {"przedmiot": "racja", "waga": 3, "ilosc": [1, 1]},
+    {"przedmiot": "papierosy", "waga": 3, "ilosc": [1, 1]},
+    {"przedmiot": "zapalki", "waga": 3, "ilosc": [1, 1]},
+    {"przedmiot": "klucze_dom", "waga": 3, "ilosc": [1, 1]},
+    {"przedmiot": "lom", "waga": 1, "ilosc": [1, 1]},
+    {"przedmiot": "latarka", "waga": 1, "ilosc": [1, 1]}
+  ]},
+  "piwnica": {"splądrowanie": 10, "lup": [
+    {"przedmiot": "konserwa", "waga": 6, "ilosc": [2, 6]},
+    {"przedmiot": "ziemniaki", "waga": 6, "ilosc": [2, 5]},
+    {"przedmiot": "sloiki", "waga": 6, "ilosc": [2, 6]},
+    {"przedmiot": "woda", "waga": 2, "ilosc": [2, 6]},
+    {"przedmiot": "torba_narzedzia", "waga": 2, "ilosc": [1, 1]},
+    {"przedmiot": "gwozdzie", "waga": 3, "ilosc": [1, 2]},
+    {"przedmiot": "lina", "waga": 2, "ilosc": [1, 1]},
+    {"przedmiot": "siekiera", "waga": 2, "ilosc": [1, 1]},
+    {"przedmiot": "lom", "waga": 2, "ilosc": [1, 1]},
+    {"przedmiot": "saperka", "waga": 1, "ilosc": [1, 1]},
+    {"przedmiot": "kanister", "waga": 1, "ilosc": [1, 1]}
+  ]},
+  "sklep": {"splądrowanie": 30, "lup": [
+    {"przedmiot": "racja", "waga": 6, "ilosc": [2, 6]},
+    {"przedmiot": "konserwa", "waga": 6, "ilosc": [2, 8]},
+    {"przedmiot": "ocet", "waga": 6, "ilosc": [1, 6]},
+    {"przedmiot": "woda", "waga": 4, "ilosc": [2, 6]},
+    {"przedmiot": "wodka", "waga": 4, "ilosc": [1, 4]},
+    {"przedmiot": "papierosy", "waga": 4, "ilosc": [2, 10]},
+    {"przedmiot": "zapalki", "waga": 4, "ilosc": [2, 10]},
+    {"przedmiot": "swiece", "waga": 3, "ilosc": [1, 4]},
+    {"przedmiot": "cukier", "waga": 3, "ilosc": [1, 4]}
+  ]},
+  "kiosk": {"splądrowanie": 40, "lup": [
+    {"przedmiot": "papierosy", "waga": 8, "ilosc": [2, 10]},
+    {"przedmiot": "zapalki", "waga": 6, "ilosc": [2, 10]},
+    {"przedmiot": "baterie", "waga": 3, "ilosc": [2, 6]},
+    {"przedmiot": "gazety", "waga": 4, "ilosc": [1, 5]},
+    {"przedmiot": "plan_warszawy", "waga": 3, "ilosc": [1, 1]},
+    {"przedmiot": "czekolada", "waga": 2, "ilosc": [1, 3]}
+  ]},
+  "apteka": {"splądrowanie": 50, "lup": [
+    {"przedmiot": "bandaz", "waga": 8, "ilosc": [2, 6]},
+    {"przedmiot": "woda_utleniona", "waga": 6, "ilosc": [1, 3]},
+    {"przedmiot": "polopiryna", "waga": 6, "ilosc": [1, 4]},
+    {"przedmiot": "vibovit", "waga": 4, "ilosc": [1, 3]},
+    {"przedmiot": "antybiotyk", "waga": 3, "ilosc": [1, 2]},
+    {"przedmiot": "spirytus", "waga": 3, "ilosc": [1, 2]},
+    {"przedmiot": "apteczka", "waga": 2, "ilosc": [1, 1]},
+    {"przedmiot": "poradnik_pp", "waga": 1, "ilosc": [1, 1]}
+  ]},
+  "pewex": {"splądrowanie": 60, "lup": [
+    {"przedmiot": "marlboro", "waga": 6, "ilosc": [2, 10]},
+    {"przedmiot": "czekolada", "waga": 6, "ilosc": [2, 6]},
+    {"przedmiot": "whisky", "waga": 4, "ilosc": [1, 2]},
+    {"przedmiot": "konserwa", "waga": 3, "ilosc": [2, 4]},
+    {"przedmiot": "latarka", "waga": 2, "ilosc": [1, 1]},
+    {"przedmiot": "baterie", "waga": 3, "ilosc": [2, 8]},
+    {"przedmiot": "radio", "waga": 1, "ilosc": [1, 1]}
+  ]},
+  "dzialki": {"splądrowanie": 5, "lup": [
+    {"przedmiot": "sloiki", "waga": 6, "ilosc": [2, 8]},
+    {"przedmiot": "ziemniaki", "waga": 5, "ilosc": [2, 6]},
+    {"przedmiot": "siekiera", "waga": 3, "ilosc": [1, 1]},
+    {"przedmiot": "saperka", "waga": 3, "ilosc": [1, 1]},
+    {"przedmiot": "nasiona", "waga": 3, "ilosc": [1, 1]},
+    {"przedmiot": "lina", "waga": 2, "ilosc": [1, 1]},
+    {"przedmiot": "wodka", "waga": 2, "ilosc": [1, 1]},
+    {"przedmiot": "zapalki", "waga": 2, "ilosc": [1, 2]}
+  ]},
+  "komisariat": {"splądrowanie": 40, "lup": [
+    {"przedmiot": "palka", "waga": 5, "ilosc": [1, 1]},
+    {"przedmiot": "kajdanki", "waga": 3, "ilosc": [1, 1]},
+    {"przedmiot": "latarka", "waga": 4, "ilosc": [1, 1]},
+    {"przedmiot": "naboje_9mm", "waga": 3, "ilosc": [3, 12]},
+    {"przedmiot": "pistolet", "waga": 1, "ilosc": [1, 1]},
+    {"przedmiot": "apteczka", "waga": 2, "ilosc": [1, 1]},
+    {"przedmiot": "maska_gazowa", "waga": 2, "ilosc": [1, 1]},
+    {"przedmiot": "radio", "waga": 1, "ilosc": [1, 1]}
+  ]},
+  "jednostka": {"splądrowanie": 50, "lup": [
+    {"przedmiot": "naboje_762", "waga": 5, "ilosc": [5, 30]},
+    {"przedmiot": "kalach", "waga": 1, "ilosc": [1, 1]},
+    {"przedmiot": "saperka", "waga": 4, "ilosc": [1, 1]},
+    {"przedmiot": "bagnet", "waga": 3, "ilosc": [1, 1]},
+    {"przedmiot": "maska_gazowa", "waga": 4, "ilosc": [1, 1]},
+    {"przedmiot": "konserwa", "waga": 5, "ilosc": [2, 6]},
+    {"przedmiot": "mapa_sztabowa", "waga": 2, "ilosc": [1, 1]},
+    {"przedmiot": "apteczka", "waga": 3, "ilosc": [1, 1]}
+  ]},
+  "szpital": {"splądrowanie": 30, "lup": [
+    {"przedmiot": "bandaz", "waga": 8, "ilosc": [2, 8]},
+    {"przedmiot": "antybiotyk", "waga": 4, "ilosc": [1, 3]},
+    {"przedmiot": "spirytus", "waga": 4, "ilosc": [1, 2]},
+    {"przedmiot": "woda_utleniona", "waga": 5, "ilosc": [1, 3]},
+    {"przedmiot": "polopiryna", "waga": 4, "ilosc": [1, 4]},
+    {"przedmiot": "torba_pielegniarska", "waga": 2, "ilosc": [1, 1]},
+    {"przedmiot": "racja", "waga": 2, "ilosc": [1, 3]}
+  ]},
+  "zajezdnia": {"splądrowanie": 10, "lup": [
+    {"przedmiot": "torba_narzedzia", "waga": 4, "ilosc": [1, 1]},
+    {"przedmiot": "drag_zwrotnice", "waga": 3, "ilosc": [1, 1]},
+    {"przedmiot": "lom", "waga": 3, "ilosc": [1, 1]},
+    {"przedmiot": "latarka", "waga": 3, "ilosc": [1, 1]},
+    {"przedmiot": "kanister", "waga": 2, "ilosc": [1, 1]},
+    {"przedmiot": "apteczka", "waga": 2, "ilosc": [1, 1]}
+  ]},
+  "kosciol": {"splądrowanie": 10, "lup": [
+    {"przedmiot": "gromnice", "waga": 6, "ilosc": [2, 10]},
+    {"przedmiot": "wino_mszalne", "waga": 3, "ilosc": [1, 3]},
+    {"przedmiot": "zapalki", "waga": 3, "ilosc": [1, 2]},
+    {"przedmiot": "racja", "waga": 2, "ilosc": [1, 3]}
+  ]},
+  "osiedle": {"splądrowanie": 40, "lup": [
+    {"przedmiot": "racja", "waga": 2, "ilosc": [1, 1]},
+    {"przedmiot": "papierosy", "waga": 2, "ilosc": [1, 1]},
+    {"przedmiot": "lom", "waga": 1, "ilosc": [1, 1]},
+    {"przedmiot": "noz_kuchenny", "waga": 1, "ilosc": [1, 1]}
+  ]}
+}

@@ -1,0 +1,466 @@
+{
+  "dowod": {
+    "nazwa": "Dowód osobisty",
+    "daje": []
+  },
+  "klucze_dom": {
+    "nazwa": "Klucze do mieszkania",
+    "daje": [
+      "klucze"
+    ]
+  },
+  "okulary": {
+    "nazwa": "Okulary",
+    "daje": [
+      "okulary"
+    ]
+  },
+  "papierosy": {
+    "nazwa": "Papierosy (paczka)",
+    "daje": [
+      "papierosy"
+    ],
+    "porcje": 20
+  },
+  "wodka": {
+    "nazwa": "Wódka (pół litra)",
+    "daje": [
+      "alkohol"
+    ],
+    "porcje": 3
+  },
+  "spirytus": {
+    "nazwa": "Spirytus (butelka)",
+    "daje": [
+      "alkohol",
+      "odkazanie"
+    ],
+    "porcje": 5
+  },
+  "zlote": {
+    "nazwa": "Złote (zł)",
+    "daje": [
+      "pieniadze"
+    ]
+  },
+  "dolary": {
+    "nazwa": "Dolary (USD)",
+    "daje": [
+      "pieniadze"
+    ]
+  },
+  "noz_kuchenny": {
+    "nazwa": "Nóż kuchenny",
+    "daje": [
+      "noz"
+    ]
+  },
+  "mlotek": {
+    "nazwa": "Młotek",
+    "daje": [
+      "mlotek"
+    ]
+  },
+  "srubokret": {
+    "nazwa": "Śrubokręt",
+    "daje": [
+      "srubokret"
+    ]
+  },
+  "torba_narzedzia": {
+    "nazwa": "Torba z narzędziami",
+    "daje": [
+      "narzedzia",
+      "srubokret",
+      "mlotek"
+    ]
+  },
+  "gwozdzie": {
+    "nazwa": "Gwoździe (garść)",
+    "daje": [
+      "gwozdzie"
+    ]
+  },
+  "sznur": {
+    "nazwa": "Sznur do bielizny",
+    "daje": [
+      "sznur"
+    ]
+  },
+  "lina": {
+    "nazwa": "Lina",
+    "daje": [
+      "lina",
+      "sznur"
+    ]
+  },
+  "siekiera": {
+    "nazwa": "Siekiera",
+    "daje": [
+      "siekiera"
+    ]
+  },
+  "lom": {
+    "nazwa": "Łom",
+    "daje": [
+      "lom"
+    ]
+  },
+  "saperka": {
+    "nazwa": "Saperka",
+    "daje": [
+      "saperka"
+    ]
+  },
+  "latarka": {
+    "nazwa": "Latarka",
+    "daje": [
+      "swiatlo"
+    ]
+  },
+  "swiece": {
+    "nazwa": "Świece",
+    "daje": [
+      "swiatlo"
+    ]
+  },
+  "zapalki": {
+    "nazwa": "Zapałki (pudełko)",
+    "daje": [
+      "ogien"
+    ],
+    "porcje": 30
+  },
+  "baterie": {
+    "nazwa": "Baterie R20",
+    "daje": [
+      "baterie"
+    ]
+  },
+  "radio": {
+    "nazwa": "Radio tranzystorowe",
+    "daje": [
+      "radio"
+    ]
+  },
+  "racja": {
+    "nazwa": "Racja jedzenia (chleb, konserwa, słoik)",
+    "daje": [
+      "jedzenie"
+    ]
+  },
+  "konserwa": {
+    "nazwa": "Konserwa turystyczna",
+    "daje": [
+      "jedzenie"
+    ]
+  },
+  "woda": {
+    "nazwa": "Woda czysta (litr)",
+    "daje": [
+      "woda"
+    ]
+  },
+  "woda_surowa": {
+    "nazwa": "Woda surowa (litr)",
+    "daje": [
+      "woda_surowa"
+    ]
+  },
+  "ocet": {
+    "nazwa": "Ocet (butelka)",
+    "daje": [
+      "ocet"
+    ]
+  },
+  "bandaz": {
+    "nazwa": "Bandaż",
+    "daje": [
+      "bandaz"
+    ]
+  },
+  "apteczka": {
+    "nazwa": "Apteczka samochodowa",
+    "daje": [
+      "apteczka",
+      "bandaz"
+    ]
+  },
+  "woda_utleniona": {
+    "nazwa": "Woda utleniona",
+    "daje": [
+      "odkazanie"
+    ],
+    "porcje": 5
+  },
+  "antybiotyk": {
+    "nazwa": "Antybiotyk (opakowanie)",
+    "daje": [
+      "antybiotyk"
+    ]
+  },
+  "torba_pielegniarska": {
+    "nazwa": "Torba pielęgniarska",
+    "daje": [
+      "apteczka",
+      "bandaz",
+      "odkazanie"
+    ]
+  },
+  "poradnik_pp": {
+    "nazwa": "Poradnik pierwszej pomocy",
+    "daje": [
+      "ksiazka"
+    ],
+    "akcje": [
+      "opatrunek"
+    ]
+  },
+  "ksiazka_126p": {
+    "nazwa": "„Samochód Fiat 126p. Naprawa”",
+    "daje": [
+      "ksiazka"
+    ],
+    "akcje": [
+      "naprawa"
+    ]
+  },
+  "mapa_sztabowa": {
+    "nazwa": "Mapa sztabowa okolic Warszawy",
+    "daje": [
+      "ksiazka",
+      "mapa"
+    ],
+    "akcje": [
+      "orientacja",
+      "przejscie"
+    ]
+  },
+  "plan_warszawy": {
+    "nazwa": "Plan Warszawy",
+    "daje": [
+      "mapa"
+    ]
+  },
+  "drag_zwrotnice": {
+    "nazwa": "Drąg do przestawiania zwrotnic",
+    "daje": [
+      "lom"
+    ]
+  },
+  "klucze_zajezdnia": {
+    "nazwa": "Klucze do zajezdni tramwajowej",
+    "daje": [
+      "klucze"
+    ]
+  },
+  "lornetka": {
+    "nazwa": "Lornetka",
+    "daje": [
+      "lornetka"
+    ]
+  },
+  "maska_gazowa": {
+    "nazwa": "Maska przeciwgazowa",
+    "daje": [
+      "maska"
+    ]
+  },
+  "bagnet": {
+    "nazwa": "Bagnet",
+    "daje": [
+      "noz"
+    ]
+  },
+  "dwururka": {
+    "nazwa": "Dwururka myśliwska",
+    "daje": [
+      "bron_palna",
+      "dwururka"
+    ]
+  },
+  "naboje_srut": {
+    "nazwa": "Naboje śrutowe",
+    "daje": [
+      "amunicja_srut"
+    ]
+  },
+  "plik_dolarow": {
+    "nazwa": "Plik dolarów",
+    "daje": [
+      "pieniadze"
+    ]
+  },
+  "zegarki": {
+    "nazwa": "Radzieckie zegarki na handel",
+    "daje": [
+      "towar"
+    ]
+  },
+  "kompas": {
+    "nazwa": "Kompas",
+    "daje": [
+      "kompas"
+    ]
+  },
+  "finka": {
+    "nazwa": "Finka harcerska",
+    "daje": [
+      "noz"
+    ]
+  },
+  "klucz_zakrystia": {
+    "nazwa": "Klucz do zakrystii",
+    "daje": [
+      "klucze"
+    ]
+  },
+  "gromnice": {
+    "nazwa": "Gromnice",
+    "daje": [
+      "swiatlo"
+    ]
+  },
+  "klucz_wezel": {
+    "nazwa": "Klucz do węzła cieplnego i piwnic",
+    "daje": [
+      "klucze"
+    ]
+  },
+  "maluch": {
+    "nazwa": "Fiat 126p (pół baku)",
+    "daje": [
+      "samochod"
+    ]
+  },
+  "kanister": {
+    "nazwa": "Kanister benzyny (10 l)",
+    "daje": [
+      "paliwo"
+    ]
+  },
+  "palka": {
+    "nazwa": "Pałka milicyjna",
+    "daje": [
+      "palka"
+    ]
+  },
+  "kajdanki": {
+    "nazwa": "Kajdanki",
+    "daje": [
+      "kajdanki"
+    ]
+  },
+  "klucze_sklep": {
+    "nazwa": "Klucze do sklepu i zaplecza",
+    "daje": [
+      "klucze"
+    ]
+  },
+  "nasiona": {
+    "nazwa": "Nasiona i sadzonki",
+    "daje": [
+      "nasiona"
+    ]
+  },
+  "klucze_dzialka": {
+    "nazwa": "Klucze do altanki na działce",
+    "daje": [
+      "klucze"
+    ]
+  },
+  "polopiryna": {
+    "nazwa": "Polopiryna (listek tabletek)",
+    "daje": [
+      "leki_przeciwbolowe"
+    ]
+  },
+  "vibovit": {
+    "nazwa": "Vibovit (witaminy)",
+    "daje": [
+      "witaminy"
+    ]
+  },
+  "ziemniaki": {
+    "nazwa": "Ziemniaki (kilogram)",
+    "daje": [
+      "jedzenie_surowe"
+    ]
+  },
+  "sloiki": {
+    "nazwa": "Słoik z przetworami",
+    "daje": [
+      "jedzenie"
+    ]
+  },
+  "cukier": {
+    "nazwa": "Cukier (kilogram)",
+    "daje": [
+      "jedzenie",
+      "towar"
+    ],
+    "porcje": 3
+  },
+  "gazety": {
+    "nazwa": "Gazeta",
+    "daje": [
+      "papier"
+    ]
+  },
+  "czekolada": {
+    "nazwa": "Czekolada",
+    "daje": [
+      "jedzenie",
+      "towar"
+    ]
+  },
+  "marlboro": {
+    "nazwa": "Marlboro (paczka)",
+    "daje": [
+      "papierosy",
+      "towar"
+    ],
+    "porcje": 20
+  },
+  "whisky": {
+    "nazwa": "Whisky (butelka)",
+    "daje": [
+      "alkohol",
+      "towar"
+    ],
+    "porcje": 4
+  },
+  "wino_mszalne": {
+    "nazwa": "Wino mszalne (butelka)",
+    "daje": [
+      "alkohol"
+    ],
+    "porcje": 3
+  },
+  "naboje_9mm": {
+    "nazwa": "Naboje 9 mm",
+    "daje": [
+      "amunicja_9mm"
+    ]
+  },
+  "naboje_762": {
+    "nazwa": "Naboje 7,62 mm",
+    "daje": [
+      "amunicja_762"
+    ]
+  },
+  "pistolet": {
+    "nazwa": "Pistolet P-64",
+    "daje": [
+      "bron_palna",
+      "pistolet"
+    ]
+  },
+  "kalach": {
+    "nazwa": "Karabinek AKM",
+    "daje": [
+      "bron_palna",
+      "kalach"
+    ]
+  }
+}

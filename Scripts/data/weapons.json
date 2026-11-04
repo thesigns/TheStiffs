@@ -1,0 +1,14 @@
+{
+  "_opis": "Broń. Klucz = to, co przedmiot „daje”. strefy: w których strefach można nią atakować (3 = na wyciągnięcie ręki, 4 = uchwycony). mozg: kroki do testu ataku. mozg_strefa: dodatkowe kroki w danej strefie. klinowanie: % szans, że przy sukcesie z kosztem utknie. krotka: działa bez kary, gdy postać jest uchwycona. Wartości wstępne.",
+  "piesci": {"nazwa": "gołe ręce", "halas": 2, "strefy": [3, 4], "mozg": -3, "klinowanie": 0, "krotka": true},
+  "kolba": {"nazwa": "kolba broni palnej", "halas": 2, "strefy": [3, 4], "mozg": -2, "klinowanie": 0, "krotka": false},
+  "noz": {"nazwa": "nóż", "halas": 1, "strefy": [3, 4], "mozg": 0, "mozg_strefa": {"3": -1, "4": 1}, "klinowanie": 15, "krotka": true},
+  "mlotek": {"nazwa": "młotek", "halas": 2, "strefy": [3, 4], "mozg": 0, "klinowanie": 5, "krotka": true},
+  "lom": {"nazwa": "łom", "halas": 2, "strefy": [3], "mozg": 0, "klinowanie": 5, "krotka": false},
+  "siekiera": {"nazwa": "siekiera", "halas": 2, "strefy": [3], "mozg": 1, "klinowanie": 25, "krotka": false},
+  "saperka": {"nazwa": "saperka", "halas": 2, "strefy": [3], "mozg": 0, "klinowanie": 10, "krotka": false},
+  "palka": {"nazwa": "pałka", "halas": 2, "strefy": [3], "mozg": -1, "klinowanie": 0, "krotka": false},
+  "dwururka": {"nazwa": "dwururka", "palna": true, "halas": 5, "strefy": [2, 3], "mozg": 0, "mozg_strefa": {"3": 1}, "magazynek": 2, "amunicja": "amunicja_srut", "krotka": false},
+  "kalach": {"nazwa": "kałasznikow", "palna": true, "halas": 5, "strefy": [1, 2, 3], "mozg": 0, "magazynek": 30, "amunicja": "amunicja_762", "seria": true, "krotka": false},
+  "pistolet": {"nazwa": "pistolet P-64", "palna": true, "halas": 5, "strefy": [2, 3], "mozg": -1, "magazynek": 6, "amunicja": "amunicja_9mm", "krotka": true}
+}

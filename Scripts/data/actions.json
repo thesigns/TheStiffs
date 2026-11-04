@@ -1,0 +1,650 @@
+{
+  "wywazanie_drzwi": {
+    "nazwa": "Wyważenie drzwi",
+    "umiejetnosc": "majsterkowanie",
+    "minuty": 10,
+    "halas": 4,
+    "fizyczna": true,
+    "czesci": [
+      "reka"
+    ],
+    "narzedzia": [
+      "lom",
+      "siekiera"
+    ],
+    "bez_narzedzia": -1,
+    "sukces": {
+      "tekst": "Drzwi ustępują."
+    },
+    "porazka": {
+      "tekst": "Drzwi trzymają, a huk poszedł na całą klatkę."
+    },
+    "koszty": [
+      {
+        "tekst": "Zajęło to dłużej, niż powinno.",
+        "minuty": 10
+      },
+      {
+        "tekst": "Futryna pękła z większym hukiem, niż chciałeś.",
+        "halas": 1
+      },
+      {
+        "tekst": "Zamek wyrwany, ale drzwi już się nie zamkną.",
+        "zuzycie": "drzwi nie do zamknięcia"
+      }
+    ],
+    "katastrofy": [
+      {
+        "tekst": "Narzędzie ześlizguje się i rozcina dłoń.",
+        "rana": {
+          "miejsce": "reka",
+          "ciezkosc": "powazna"
+        }
+      },
+      {
+        "tekst": "Coś po drugiej stronie drzwi odpowiada na łomot.",
+        "halas": 1
+      },
+      {
+        "tekst": "Ramię mocno obite, ręka drętwieje.",
+        "rana": {
+          "miejsce": "reka",
+          "ciezkosc": "drasniecie"
+        },
+        "zmeczenie": 1
+      }
+    ]
+  },
+  "otwieranie_zamka": {
+    "nazwa": "Otwarcie zamka po cichu",
+    "umiejetnosc": "majsterkowanie",
+    "minuty": 20,
+    "halas": 1,
+    "wzrokowa": true,
+    "czesci": [
+      "reka"
+    ],
+    "narzedzia": [
+      "wytrych",
+      "srubokret",
+      "klucze"
+    ],
+    "bez_narzedzia": -2,
+    "sukces": {
+      "tekst": "Zamek puszcza z cichym kliknięciem."
+    },
+    "porazka": {
+      "tekst": "Zamek nie puszcza."
+    },
+    "koszty": [
+      {
+        "tekst": "Grzebanie w zamku trwało całą wieczność.",
+        "minuty": 10
+      },
+      {
+        "tekst": "Zgrzyt metalu niesie się po klatce.",
+        "halas": 1
+      },
+      {
+        "tekst": "Wytrych albo śrubokręt wygiął się i ledwo się nadaje.",
+        "zuzycie": "narzędzie do zamków"
+      }
+    ],
+    "katastrofy": [
+      {
+        "tekst": "Coś złamało się w zamku. Tych drzwi już nie otworzysz po cichu.",
+        "zuzycie": "zamek zablokowany"
+      },
+      {
+        "tekst": "Długie grzebanie pod drzwiami: coś po drugiej stronie usłyszało.",
+        "halas": 2
+      }
+    ]
+  },
+  "przekradanie": {
+    "nazwa": "Przekradanie się",
+    "umiejetnosc": "skradanie",
+    "minuty": 10,
+    "halas": 1,
+    "fizyczna": true,
+    "czesci": [
+      "noga"
+    ],
+    "sukces": {
+      "tekst": "Przechodzisz niezauważony."
+    },
+    "porazka": {
+      "tekst": "Ktoś albo coś cię zauważyło lub usłyszało.",
+      "halas": 1
+    },
+    "koszty": [
+      {
+        "tekst": "Musiałeś długo czekać w ukryciu na dobry moment.",
+        "minuty": 10
+      },
+      {
+        "tekst": "Coś zachrzęściło pod butem.",
+        "halas": 1
+      },
+      {
+        "tekst": "Przeciskanie się przez krzaki i płoty kosztowało siły.",
+        "zmeczenie": 1
+      }
+    ],
+    "katastrofy": [
+      {
+        "tekst": "Potykasz się o coś metalowego, łoskot niesie się daleko.",
+        "halas": 2
+      },
+      {
+        "tekst": "Wpadasz prosto na to, czego chciałeś uniknąć."
+      }
+    ]
+  },
+  "obserwacja": {
+    "nazwa": "Obserwacja i nasłuchiwanie",
+    "umiejetnosc": "czujnosc",
+    "minuty": 10,
+    "halas": 0,
+    "wzrokowa": true,
+    "narzedzia": [
+      "lornetka"
+    ],
+    "sukces": {
+      "tekst": "Widzisz i słyszysz, co tu się dzieje."
+    },
+    "porazka": {
+      "tekst": "Nic nie wypatrzyłeś, co nie znaczy, że nic tam nie ma."
+    },
+    "koszty": [
+      {
+        "tekst": "Obserwacja zajęła dużo czasu.",
+        "minuty": 10
+      },
+      {
+        "tekst": "Wychyliłeś się, żeby lepiej widzieć, i mogłeś zostać zauważony.",
+        "halas": 1
+      }
+    ],
+    "katastrofy": [
+      {
+        "tekst": "Wychyliłeś się za bardzo i coś cię zobaczyło.",
+        "halas": 1
+      },
+      {
+        "tekst": "Patrzyłeś w złą stronę i dałeś się zaskoczyć."
+      }
+    ]
+  },
+  "wspinaczka": {
+    "nazwa": "Wspinaczka",
+    "umiejetnosc": "kondycja",
+    "minuty": 10,
+    "halas": 2,
+    "fizyczna": true,
+    "czesci": [
+      "reka",
+      "noga"
+    ],
+    "narzedzia": [
+      "lina"
+    ],
+    "sukces": {
+      "tekst": "Jesteś na górze."
+    },
+    "porazka": {
+      "tekst": "Nie dajesz rady wejść."
+    },
+    "koszty": [
+      {
+        "tekst": "Wspinaczka wyciska z ciebie siły.",
+        "zmeczenie": 1
+      },
+      {
+        "tekst": "Blacha parapetu zadudniła pod butem.",
+        "halas": 1
+      },
+      {
+        "tekst": "Zdzierasz skórę z dłoni.",
+        "rana": {
+          "miejsce": "reka",
+          "ciezkosc": "drasniecie"
+        }
+      }
+    ],
+    "katastrofy": [
+      {
+        "tekst": "Spadasz.",
+        "rana": {
+          "miejsce": "noga",
+          "ciezkosc": "powazna"
+        },
+        "halas": 1
+      },
+      {
+        "tekst": "Rynna odrywa się od ściany z łoskotem.",
+        "halas": 2
+      }
+    ]
+  },
+  "skok": {
+    "nazwa": "Skok",
+    "umiejetnosc": "kondycja",
+    "minuty": 1,
+    "halas": 2,
+    "fizyczna": true,
+    "czesci": [
+      "noga"
+    ],
+    "sukces": {
+      "tekst": "Lądujesz po drugiej stronie."
+    },
+    "porazka": {
+      "tekst": "Nie skaczesz albo nie doskakujesz, ale nic sobie nie robisz."
+    },
+    "koszty": [
+      {
+        "tekst": "Lądujesz ciężko, z hukiem.",
+        "halas": 1
+      },
+      {
+        "tekst": "Kostka zabolała przy lądowaniu.",
+        "rana": {
+          "miejsce": "noga",
+          "ciezkosc": "drasniecie"
+        }
+      }
+    ],
+    "katastrofy": [
+      {
+        "tekst": "Złe lądowanie. Noga.",
+        "rana": {
+          "miejsce": "noga",
+          "ciezkosc": "powazna"
+        }
+      },
+      {
+        "tekst": "Upadek na beton, uderzasz głową.",
+        "rana": {
+          "miejsce": "glowa",
+          "ciezkosc": "drasniecie"
+        },
+        "halas": 1
+      }
+    ]
+  },
+  "opatrunek": {
+    "nazwa": "Opatrunek",
+    "umiejetnosc": "opatrywanie",
+    "minuty": 10,
+    "halas": 0,
+    "wzrokowa": true,
+    "czesci": [
+      "reka"
+    ],
+    "narzedzia": [
+      "bandaz",
+      "apteczka"
+    ],
+    "bez_narzedzia": -2,
+    "parametry": {
+      "cel": "numer rany"
+    },
+    "efekt": "opatrz",
+    "sukces": {
+      "tekst": "Opatrunek trzyma."
+    },
+    "porazka": {
+      "tekst": "Opatrunek nie trzyma, krew dalej przecieka."
+    },
+    "koszty": [
+      {
+        "tekst": "Poszło więcej bandaży, niż trzeba.",
+        "zuzycie": "środki opatrunkowe"
+      },
+      {
+        "tekst": "Opatrywanie trwało długo.",
+        "minuty": 10
+      }
+    ],
+    "katastrofy": [
+      {
+        "tekst": "Brud dostał się do rany.",
+        "zakazenie": 1
+      },
+      {
+        "tekst": "Ból przy opatrywaniu wytrąca z równowagi.",
+        "nerwy": 1
+      }
+    ],
+    "zuzywa": [
+      "bandaz"
+    ]
+  },
+  "barykadowanie": {
+    "nazwa": "Barykadowanie",
+    "umiejetnosc": "majsterkowanie",
+    "minuty": 30,
+    "halas": 3,
+    "fizyczna": true,
+    "czesci": [
+      "reka"
+    ],
+    "narzedzia": [
+      "mlotek",
+      "gwozdzie"
+    ],
+    "bez_narzedzia": -1,
+    "efekt": "barykada",
+    "sukces": {
+      "tekst": "Barykada stoi."
+    },
+    "porazka": {
+      "tekst": "Barykada wygląda groźnie, ale nie utrzyma naporu."
+    },
+    "koszty": [
+      {
+        "tekst": "Robota zajęła więcej czasu.",
+        "minuty": 20
+      },
+      {
+        "tekst": "Przesuwanie mebli było głośne.",
+        "halas": 1
+      },
+      {
+        "tekst": "Dźwiganie mebli wyczerpuje.",
+        "zmeczenie": 1
+      }
+    ],
+    "katastrofy": [
+      {
+        "tekst": "Szafa przewraca się z hukiem.",
+        "halas": 2
+      },
+      {
+        "tekst": "Młotek trafia w palce.",
+        "rana": {
+          "miejsce": "reka",
+          "ciezkosc": "drasniecie"
+        }
+      }
+    ],
+    "zuzywa": [
+      "gwozdzie"
+    ]
+  },
+  "przekonywanie": {
+    "nazwa": "Przekonywanie",
+    "umiejetnosc": "kombinowanie",
+    "minuty": 10,
+    "halas": 2,
+    "parametry": {
+      "nastawienie": "wrogi, nieufny, obojetny albo przyjazny"
+    },
+    "sukces": {
+      "tekst": "Daje się przekonać."
+    },
+    "porazka": {
+      "tekst": "Nie daje się przekonać."
+    },
+    "koszty": [
+      {
+        "tekst": "Zgadza się, ale chce czegoś w zamian.",
+        "zuzycie": "przysługa albo towar"
+      },
+      {
+        "tekst": "Rozmowa się przeciąga.",
+        "minuty": 10
+      },
+      {
+        "tekst": "Rozmowa robi się głośna.",
+        "halas": 1
+      }
+    ],
+    "katastrofy": [
+      {
+        "tekst": "Obrażasz go albo przestraszasz. Teraz jest wrogi."
+      },
+      {
+        "tekst": "Kłótnia robi się głośna.",
+        "halas": 2
+      }
+    ]
+  },
+  "przejscie": {
+    "nazwa": "Przejście do innego miejsca",
+    "umiejetnosc": "skradanie",
+    "minuty": 10,
+    "halas": 1,
+    "fizyczna": true,
+    "czesci": [
+      "noga"
+    ],
+    "parametry": {
+      "do": "identyfikator węzła"
+    },
+    "efekt": "przejscie",
+    "sukces": {
+      "tekst": "Docierasz na miejsce po cichu."
+    },
+    "porazka": {
+      "tekst": "Docierasz, ale nie po cichu. Coś zwróciło na ciebie uwagę.",
+      "halas": 2
+    },
+    "koszty": [
+      {
+        "tekst": "Musiałeś nadłożyć drogi.",
+        "minuty": 10
+      },
+      {
+        "tekst": "Raz musiałeś przebiec przez otwarty teren.",
+        "halas": 1,
+        "zmeczenie": 1
+      }
+    ],
+    "katastrofy": [
+      {
+        "tekst": "Wpadasz na otwartą przestrzeń w najgorszym momencie.",
+        "halas": 2
+      },
+      {
+        "tekst": "Upadek w gruzach.",
+        "rana": {
+          "miejsce": "noga",
+          "ciezkosc": "drasniecie"
+        },
+        "minuty": 10
+      }
+    ]
+  },
+  "naprawa": {
+    "nazwa": "Naprawa",
+    "umiejetnosc": "majsterkowanie",
+    "minuty": 30,
+    "halas": 2,
+    "wzrokowa": true,
+    "czesci": [
+      "reka"
+    ],
+    "narzedzia": [
+      "narzedzia"
+    ],
+    "bez_narzedzia": -2,
+    "sukces": {
+      "tekst": "Działa."
+    },
+    "porazka": {
+      "tekst": "Nie działa."
+    },
+    "koszty": [
+      {
+        "tekst": "Naprawa zajęła dużo dłużej.",
+        "minuty": 30
+      },
+      {
+        "tekst": "Działa, ale prowizorycznie i może znów nawalić.",
+        "zuzycie": "naprawa prowizoryczna"
+      }
+    ],
+    "katastrofy": [
+      {
+        "tekst": "Zepsułeś to bardziej, niż było.",
+        "zuzycie": "przedmiot uszkodzony"
+      },
+      {
+        "tekst": "Skaleczenie o ostrą krawędź.",
+        "rana": {
+          "miejsce": "reka",
+          "ciezkosc": "drasniecie"
+        }
+      }
+    ]
+  },
+  "atak": {
+    "nazwa": "Atak wręcz",
+    "umiejetnosc": "walka",
+    "wzrokowa": true,
+    "fizyczna": true,
+    "czesci": [
+      "reka"
+    ],
+    "walka": true,
+    "minuty": 0,
+    "halas": 0,
+    "porazka": {
+      "tekst": "Nie udaje się."
+    }
+  },
+  "strzal": {
+    "nazwa": "Strzał",
+    "umiejetnosc": "strzelanie",
+    "wzrokowa": true,
+    "czesci": [
+      "reka"
+    ],
+    "walka": true,
+    "minuty": 0,
+    "halas": 0,
+    "porazka": {
+      "tekst": "Nie udaje się."
+    }
+  },
+  "odepchniecie": {
+    "nazwa": "Odepchnięcie",
+    "umiejetnosc": "kondycja",
+    "fizyczna": true,
+    "czesci": [
+      "reka"
+    ],
+    "walka": true,
+    "minuty": 0,
+    "halas": 0,
+    "porazka": {
+      "tekst": "Nie udaje się."
+    }
+  },
+  "wyrwanie": {
+    "nazwa": "Wyrwanie się z uchwytu",
+    "umiejetnosc": "kondycja",
+    "fizyczna": true,
+    "czesci": [
+      "reka"
+    ],
+    "walka": true,
+    "minuty": 0,
+    "halas": 0,
+    "porazka": {
+      "tekst": "Nie udaje się."
+    }
+  },
+  "bieg": {
+    "nazwa": "Bieg",
+    "umiejetnosc": "kondycja",
+    "fizyczna": true,
+    "czesci": [
+      "noga"
+    ],
+    "walka": true,
+    "minuty": 0,
+    "halas": 0,
+    "porazka": {
+      "tekst": "Nie udaje się."
+    }
+  },
+  "zgubienie": {
+    "nazwa": "Zgubienie pościgu",
+    "umiejetnosc": "skradanie",
+    "czesci": [
+      "noga"
+    ],
+    "walka": true,
+    "minuty": 0,
+    "halas": 0,
+    "porazka": {
+      "tekst": "Nie udaje się."
+    }
+  },
+  "zamkniecie_drzwi": {
+    "nazwa": "Zatrzaśnięcie drzwi",
+    "umiejetnosc": "majsterkowanie",
+    "fizyczna": true,
+    "czesci": [
+      "reka"
+    ],
+    "walka": true,
+    "minuty": 0,
+    "halas": 0,
+    "porazka": {
+      "tekst": "Nie udaje się."
+    }
+  },
+  "ucieczka_w_gore": {
+    "nazwa": "Ucieczka w górę (wspinaczka)",
+    "umiejetnosc": "kondycja",
+    "fizyczna": true,
+    "czesci": [
+      "reka",
+      "noga"
+    ],
+    "walka": true,
+    "minuty": 0,
+    "halas": 0,
+    "porazka": {
+      "tekst": "Nie udaje się."
+    }
+  },
+  "przeszukanie": {
+    "nazwa": "Przeszukanie",
+    "umiejetnosc": "czujnosc",
+    "minuty": 30,
+    "halas": 2,
+    "wzrokowa": true,
+    "efekt": "przeszukanie",
+    "porazka": {
+      "tekst": "Przeszukanie nie daje wiele."
+    },
+    "koszty": [
+      {
+        "tekst": "Przeszukanie trwało dłużej.",
+        "minuty": 20
+      },
+      {
+        "tekst": "Przewracanie szaf i szuflad było głośne.",
+        "halas": 1
+      }
+    ],
+    "katastrofy": [
+      {
+        "tekst": "Coś ciężkiego spada z hukiem.",
+        "halas": 2
+      },
+      {
+        "tekst": "Skaleczenie o rozbite szkło.",
+        "rana": {
+          "miejsce": "reka",
+          "ciezkosc": "drasniecie"
+        }
+      }
+    ]
+  }
+}

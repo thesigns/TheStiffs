@@ -1,0 +1,51 @@
+{
+  "_opis": "Słabości. modyfikatory działają jak w Rules.md. Warunki: gdy_brak (brak przedmiotu dającego tag), min_zmeczenie, w_ciemnosci, fizyczne (tylko akcje fizyczne), wszystko (każda akcja).",
+  "okulary": {
+    "nazwa": "krótkowzroczność",
+    "opis": "Bez okularów świat to plamy. Okulary łatwo zbić albo zgubić.",
+    "przedmioty": [{"przedmiot": "okulary", "ilosc": 1}],
+    "modyfikatory": [{"zrodlo": "słabość: bez okularów", "kroki": -2, "umiejetnosci": ["czujnosc", "strzelanie"], "gdy_brak": "okulary"}]
+  },
+  "astma": {
+    "nazwa": "astma",
+    "opis": "Zadyszka przychodzi szybciej niż u innych. Dym i kurz to wrogowie.",
+    "przedmioty": [],
+    "modyfikatory": [{"zrodlo": "słabość: astma", "kroki": -2, "umiejetnosci": ["kondycja"], "min_zmeczenie": 3}]
+  },
+  "wiek": {
+    "nazwa": "po sześćdziesiątce",
+    "opis": "Doświadczenie jest, kolana już nie te.",
+    "przedmioty": [],
+    "modyfikatory": [{"zrodlo": "słabość: wiek", "kroki": -1, "fizyczne": true}]
+  },
+  "kolano": {
+    "nazwa": "chore kolano",
+    "opis": "Stara kontuzja. Bieg i schody bolą.",
+    "przedmioty": [],
+    "modyfikatory": [{"zrodlo": "słabość: chore kolano", "kroki": -1, "umiejetnosci": ["kondycja"]}]
+  },
+  "niedosluch": {
+    "nazwa": "niedosłuch",
+    "opis": "Coś dzwoni w uszach od lat. Kroki za plecami słychać za późno.",
+    "przedmioty": [],
+    "modyfikatory": [{"zrodlo": "słabość: niedosłuch", "kroki": -1, "umiejetnosci": ["czujnosc"]}]
+  },
+  "nikotyna": {
+    "nazwa": "nałóg nikotynowy",
+    "opis": "Bez papierosa ręce się trzęsą, a myśli rozłażą.",
+    "przedmioty": [{"przedmiot": "papierosy", "ilosc": 1}],
+    "modyfikatory": [{"zrodlo": "słabość: głód nikotynowy", "kroki": -1, "umiejetnosci": ["strzelanie", "skradanie", "opatrywanie", "kombinowanie"], "gdy_brak": "papierosy"}]
+  },
+  "alkohol": {
+    "nazwa": "nałóg alkoholowy",
+    "opis": "Bez kieliszka drżą ręce. Z kieliszkiem też, ale mniej.",
+    "przedmioty": [{"przedmiot": "wodka", "ilosc": 1}],
+    "modyfikatory": [{"zrodlo": "słabość: drżące ręce", "kroki": -1, "umiejetnosci": ["strzelanie", "opatrywanie", "majsterkowanie"], "gdy_brak": "alkohol"}]
+  },
+  "ciemnosc": {
+    "nazwa": "lęk przed ciemnością",
+    "opis": "Od dziecka. Ciemność ściska gardło i odbiera rozum.",
+    "przedmioty": [],
+    "modyfikatory": [{"zrodlo": "słabość: lęk przed ciemnością", "kroki": -1, "wszystko": true, "w_ciemnosci": true}]
+  }
+}

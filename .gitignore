@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Pliki tymczasowe skryptów (zapis stanu jest atomowy: state.tmp -> state.json)
+*.tmp
+
+# Kampanie: zapis gry, scenariusze i tajemnice zostają lokalnie.
+Campaigns/*
+!Campaigns/.gitkeep
+
+# Edytor i system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Lokalne ustawienia Claude Code (osobiste, nie projektowe)
+.claude/settings.local.json

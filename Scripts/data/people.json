@@ -1,0 +1,73 @@
+{
+  "_opis": "Kim byli sztywni. Losuje stiffs/encounter.py. Każdy sztywny był człowiekiem (Stiffs.md).",
+  "kto": {
+    "ogolne": [
+      "mężczyzna w piżamie i jednym kapciu",
+      "kobieta w podomce",
+      "emeryt w swetrze i kapciach",
+      "chłopak w dresie z trzema paskami",
+      "motorniczy w mundurze MPT",
+      "listonosz z torbą przez ramię",
+      "milicjant w szaroniebieskim mundurze",
+      "robotnik w drelichu",
+      "ekspedientka w nylonowym fartuchu",
+      "uczennica w granatowym fartuszku",
+      "ksiądz w sutannie",
+      "taksówkarz w skórzanej kurtce",
+      "student w kurtce dżinsowej",
+      "staruszka w chustce na głowie",
+      "kierowca autobusu w kurtce MZA",
+      "dozorca z pękiem kluczy",
+      "młoda kobieta w płaszczu i kozakach",
+      "poborowy w zielonym mundurze",
+      "pijak w rozpiętej kurtce",
+      "sprzątaczka w chustce i fartuchu",
+      "mężczyzna w garniturze z teczką",
+      "nastolatek w kurtce ortalionowej",
+      "kobieta w futrze z królika",
+      "palacz z kotłowni, umorusany sadzą"
+    ],
+    "szpital": [
+      "pacjent w szpitalnej koszuli",
+      "lekarz w białym kitlu",
+      "pielęgniarka w czepku",
+      "staruszek z wenflonem w ręce",
+      "salowa w fartuchu",
+      "pacjent z nogą w gipsie"
+    ],
+    "cmentarz": [
+      "mężczyzna w garniturze pogrzebowym",
+      "kobieta w czarnej sukni do trumny",
+      "starzec w garniturze z medalami",
+      "staruszka w białej koszuli z różańcem w dłoniach",
+      "mężczyzna w mundurze kolejarza, pochowany w nim",
+      "dziecko w komunijnym ubranku"
+    ]
+  },
+  "szczegoly": {
+    "swiezak": [
+      "jedna stopa bosa, but zgubiony",
+      "okulary wciąż na nosie",
+      "obrączka na palcu",
+      "w ręce wciąż siatka z zakupami",
+      "rozerwane gardło",
+      "krew zaschnięta na brodzie",
+      "zegarek na ręce wciąż chodzi",
+      "przy pasku dzwonią klucze",
+      "ślady ugryzień na przedramieniu",
+      "oczy otwarte i zamglone",
+      "w półmroku łatwo wziąć to za żywego człowieka",
+      "w kąciku ust wciąż tkwi papieros"
+    ],
+    "gnilec": [
+      "nabrzmiała, sina twarz",
+      "skóra schodzi płatami",
+      "nie ma jednej dłoni",
+      "we włosach ziemia z grobu",
+      "żuchwa zwisa luźno",
+      "smród czuć z kilku metrów",
+      "oczy zasnute bielmem",
+      "powłóczy połamaną nogą"
+    ]
+  }
+}

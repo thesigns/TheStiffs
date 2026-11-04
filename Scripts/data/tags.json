@@ -1,0 +1,99 @@
+{
+  "_opis": "Tagi życiorysu. akcje: gdzie tag daje +1 krok (identyfikatory akcji albo miejsce:<typ węzła>). dostepy: co tag otwiera fabularnie. rzeczy: spośród nich gracz wybiera Rzecz postaci. przedmioty: dodatkowe losowanie do mieszkania.",
+  "zasadnicza_sluzba": {
+    "nazwa": "zasadnicza służba",
+    "opis": "Dwa lata w wojsku. Kałasznikow, musztra, okopy, ćwiczenia w lesie.",
+    "akcje": ["strzal", "przejscie", "orientacja", "miejsce:jednostka"],
+    "dostepy": ["zna obsługę broni wojskowej i rozkład jednostki", "rozpoznaje stopnie i procedury wojskowe"],
+    "rzeczy": [{"przedmiot": "saperka", "ilosc": 1}, {"przedmiot": "mapa_sztabowa", "ilosc": 1}, {"przedmiot": "bagnet", "ilosc": 1}],
+    "przedmioty": [{"przedmiot": "maska_gazowa", "szansa": 40, "ilosc": [1, 1]}]
+  },
+  "tramwajarz": {
+    "nazwa": "tramwajarz",
+    "opis": "Motorniczy albo mechanik z MPT. Zna tory, zajezdnie i nocne kursy.",
+    "akcje": ["naprawa", "przejscie", "miejsce:zajezdnia", "miejsce:torowisko"],
+    "dostepy": ["zna zajezdnię i sieć tramwajową", "otwiera bramy zajezdni i kabiny tramwajów"],
+    "rzeczy": [{"przedmiot": "drag_zwrotnice", "ilosc": 1}, {"przedmiot": "klucze_zajezdnia", "ilosc": 1}],
+    "przedmioty": [{"przedmiot": "torba_narzedzia", "szansa": 50, "ilosc": [1, 1]}]
+  },
+  "pielegniarka": {
+    "nazwa": "pielęgniarka",
+    "opis": "Dyżury, zastrzyki, opatrunki, umierający pacjenci. Nic jej nie zdziwi, prawie.",
+    "akcje": ["opatrunek", "przekonywanie", "miejsce:szpital", "miejsce:apteka"],
+    "dostepy": ["zna szpital od środka i wie, gdzie są leki", "zna lekarzy i salowe"],
+    "rzeczy": [{"przedmiot": "torba_pielegniarska", "ilosc": 1}, {"przedmiot": "antybiotyk", "ilosc": 1}],
+    "przedmioty": [{"przedmiot": "bandaz", "szansa": 80, "ilosc": [2, 4]}, {"przedmiot": "spirytus", "szansa": 50, "ilosc": [1, 1]}]
+  },
+  "badylarz": {
+    "nazwa": "badylarz z działki",
+    "opis": "Ogródek działkowy, altanka, warzywa na zimę, ognisko w sobotę.",
+    "akcje": ["rozpalenie_ognia", "szukanie_jedzenia", "naprawa", "miejsce:dzialki"],
+    "dostepy": ["ma altankę na działkach", "zna sąsiadów z ogródków i ich zapasy"],
+    "rzeczy": [{"przedmiot": "klucze_dzialka", "ilosc": 1}, {"przedmiot": "siekiera", "ilosc": 1}],
+    "przedmioty": [{"przedmiot": "nasiona", "szansa": 70, "ilosc": [1, 1]}, {"przedmiot": "konserwa", "szansa": 60, "ilosc": [2, 6]}]
+  },
+  "cinkciarz": {
+    "nazwa": "cinkciarz",
+    "opis": "Waluta, towar, znajomości. Stadion Dziesięciolecia to drugi dom.",
+    "akcje": ["przekonywanie", "handel", "obserwacja", "miejsce:stadion"],
+    "dostepy": ["zna ludzi ze Stadionu Dziesięciolecia", "wie, kto handluje bronią"],
+    "rzeczy": [{"przedmiot": "plik_dolarow", "ilosc": 200}, {"przedmiot": "zegarki", "ilosc": 10}],
+    "przedmioty": [{"przedmiot": "dolary", "szansa": 80, "ilosc": [20, 150]}, {"przedmiot": "papierosy", "szansa": 70, "ilosc": [5, 20]}]
+  },
+  "harcerz": {
+    "nazwa": "harcerz",
+    "opis": "Obozy, biwaki, musztra, pierwsza pomoc. Może dawno, ale się pamięta.",
+    "akcje": ["rozpalenie_ognia", "orientacja", "opatrunek", "wspinaczka"],
+    "dostepy": ["zna Puszczę Kampinoską i szlaki", "umie biwakować w lesie"],
+    "rzeczy": [{"przedmiot": "kompas", "ilosc": 1}, {"przedmiot": "finka", "ilosc": 1}],
+    "przedmioty": [{"przedmiot": "lina", "szansa": 40, "ilosc": [1, 1]}]
+  },
+  "ministrant": {
+    "nazwa": "ministrant",
+    "opis": "Służba przy ołtarzu. Zna parafię, księży i babcie z różańcem.",
+    "akcje": ["przekonywanie", "przekradanie", "miejsce:kosciol"],
+    "dostepy": ["zna księży i plebanię", "wie, co jest w zakrystii i krypcie"],
+    "rzeczy": [{"przedmiot": "klucz_zakrystia", "ilosc": 1}, {"przedmiot": "gromnice", "ilosc": 3}],
+    "przedmioty": []
+  },
+  "hydraulik": {
+    "nazwa": "hydraulik ze spółdzielni",
+    "opis": "Piwnice, piony, węzły cieplne. Klucz do każdych drzwi w bloku.",
+    "akcje": ["naprawa", "wywazanie_drzwi", "otwieranie_zamka", "miejsce:piwnica"],
+    "dostepy": ["zna piwnice, węzły cieplne i strychy bloków", "wie, gdzie jest woda i jak ją odciąć"],
+    "rzeczy": [{"przedmiot": "klucz_wezel", "ilosc": 1}, {"przedmiot": "torba_narzedzia", "ilosc": 1}],
+    "przedmioty": [{"przedmiot": "lom", "szansa": 40, "ilosc": [1, 1]}]
+  },
+  "kierowca": {
+    "nazwa": "kierowca",
+    "opis": "Taksówkarz, kierowca PKS albo dostawczaka. Zna miasto i skróty.",
+    "akcje": ["prowadzenie", "naprawa", "orientacja"],
+    "dostepy": ["zna miasto, skróty i stacje benzynowe", "zna innych kierowców"],
+    "rzeczy": [{"przedmiot": "maluch", "ilosc": 1}, {"przedmiot": "kanister", "ilosc": 1}],
+    "przedmioty": [{"przedmiot": "ksiazka_126p", "szansa": 50, "ilosc": [1, 1]}, {"przedmiot": "apteczka", "szansa": 60, "ilosc": [1, 1]}]
+  },
+  "mysliwy": {
+    "nazwa": "myśliwy",
+    "opis": "Członek koła łowieckiego. Broń w szafie, pozwolenie w szufladzie.",
+    "akcje": ["strzal", "przekradanie", "obserwacja", "miejsce:las"],
+    "dostepy": ["zna koło łowieckie i jego magazyn", "zna lasy pod Warszawą"],
+    "rzeczy": [{"przedmiot": "dwururka", "ilosc": 1}, {"przedmiot": "lornetka", "ilosc": 1}],
+    "przedmioty": [{"przedmiot": "naboje_srut", "szansa": 100, "ilosc": [2, 6]}]
+  },
+  "milicjant": {
+    "nazwa": "milicjant",
+    "opis": "Posterunkowy z komisariatu MO. Mundur budzi posłuch albo nienawiść.",
+    "akcje": ["przekonywanie", "obserwacja", "miejsce:komisariat"],
+    "dostepy": ["zna komisariat MO i jego magazyn", "zna ludzi z dzielnicy i ich kartoteki"],
+    "rzeczy": [{"przedmiot": "palka", "ilosc": 1}, {"przedmiot": "kajdanki", "ilosc": 1}],
+    "przedmioty": [{"przedmiot": "latarka", "szansa": 70, "ilosc": [1, 1]}]
+  },
+  "sklepowa": {
+    "nazwa": "ekspedientka",
+    "opis": "Sklep, zaplecze, towar spod lady. Wie, co gdzie było i kto co brał.",
+    "akcje": ["przekonywanie", "handel", "miejsce:sklep"],
+    "dostepy": ["zna zaplecza sklepów i hurtownie", "wie, co trzymano spod lady"],
+    "rzeczy": [{"przedmiot": "klucze_sklep", "ilosc": 1}, {"przedmiot": "konserwa", "ilosc": 8}],
+    "przedmioty": [{"przedmiot": "ocet", "szansa": 60, "ilosc": [1, 3]}]
+  }
+}

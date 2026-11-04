@@ -1,0 +1,23 @@
+# Domyślnie Git sam rozpoznaje pliki tekstowe i w repozytorium trzyma LF.
+* text=auto
+
+# Skrypty, dane i konfiguracja: zawsze LF, także po checkoucie na Windows.
+*.py   text eol=lf
+*.json text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+
+# Dokumentacja i zapis kampanii (Markdown): LF w repo, w katalogu roboczym
+# zostaje, co ustawi edytor. Linie w Manualu są długie i celowo nie są
+# zawijane; do porównań przydaje się `git diff --word-diff`.
+*.md   text
+
+# Log zdarzeń to JSON Lines, dopisywany tylko na końcu. Przy scalaniu gałęzi
+# dwa dopisane końce łączą się bez konfliktu.
+rolls.log text eol=lf merge=union
+
+# Wszystko, co kiedyś trafi do repo jako plik binarny (obrazy, archiwa).
+*.png  binary
+*.jpg  binary
+*.gif  binary
+*.zip  binary
