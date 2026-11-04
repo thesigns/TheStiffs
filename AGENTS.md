@@ -90,7 +90,10 @@ Wszystkie komendy uruchamia się z katalogu głównego repozytorium
 
 1. Pokaż możliwości: `character.py opcje`. Opisz je krótko w czacie.
 2. Zapytaj gracza o postać: imię, kim był, tagi (2–3), słabość, Rzecz,
-   rozdanie 7 punktów, adres i bliskich (1–2).
+   rozdanie 7 punktów, adres i bliskich (1–2). **Zawsze** zapytaj też:
+   „Gdzie była twoja postać i co robiła od wieczora w środę 21 marca do
+   północy?” (noc zero, `Rules.md`). Odpowiedź ustala miejsce startu i
+   czynności z tabeli. Nie oceniaj jej wiarygodności; ekwipunku nie dodaje.
 3. **Nie wymyślaj odpowiedzi za gracza.** Jeśli gracz prosi „ty
    zaproponuj”, zaproponuj konkretną wersję i czekaj na akceptację.
 4. Postać ma być ogólnym ocalałym, a nie specjalistą. Zasady są pisane
@@ -100,16 +103,22 @@ Wszystkie komendy uruchamia się z katalogu głównego repozytorium
 
 ### 2. Mapa i postać (jawne)
 
-1. `campaign.py nowa <kampania> --start 1990-03-22T00:40`.
+1. `campaign.py nowa <kampania> --start 1990-03-22T00:00` (zmarli wstają
+   o północy).
 2. Węzły i połączenia: `campaign.py wezel` i `campaign.py polacz`.
-   - Mieszkanie postaci: `--gestosc 0 --drzwi zamek`.
+   - Mieszkanie postaci: `--gestosc 0 --drzwi zamek`. Jeśli postać zaczyna
+     gdzie indziej (szpital, praca), dodaj też węzeł miejsca startu i
+     wpisz go w karcie w polu `start`.
    - Typy węzłów biorą łup z `Scripts/data/loot.json`.
-3. `character.py szablon`, wpisz odpowiedzi gracza do `postac.json`,
+3. `character.py szablon`, wpisz odpowiedzi gracza do `postac.json` (także
+   `noc` i `start`),
    potem `character.py sprawdz` i `character.py utworz`.
 
 ### 3. Część tajna: zleca się ją agentowi w tle
 
-Agent dostaje nazwę kampanii i odesłanie do tej sekcji. W poleceniu dla
+Agent dostaje nazwę kampanii i odesłanie do tej sekcji. Odpowiedź
+gracza o noc zero i miejsce startu ma w karcie postaci (`postac.<nr>.json`),
+a scenariusz zaczyna się z tego miejsca. W poleceniu dla
 niego nie ma tajemnic, bo te dopiero wylosuje. Agent:
 
 1. Losuje ziarno: `scenario_seed.py <kampania>`, potem czyta je przez

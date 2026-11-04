@@ -29,6 +29,20 @@ TAGS_MIN, TAGS_MAX = 2, 3
 RELATIVES_MIN, RELATIVES_MAX = 1, 2
 START_FART = 1
 
+# Noc zero (Rules.md, *Noc zero*): co postać robiła od wieczora 21 marca
+# do północy. Skutki na starcie pierwszej postaci kampanii.
+# czynność: (opis, {statystyka: zmiana}, alkohol?)
+NIGHT_ACTIVITIES = {
+    "spala": ("spanie przez co najmniej 3 godziny", {}, False),
+    "odpoczywala": ("odpoczynek, kolacja, spokój", {}, False),
+    "pracowala": ("praca (dyżur, zmiana, ciężka praca)", {"zmeczenie": 1},
+                  False),
+    "pila": ("alkohol", {"zmeczenie": 1}, True),
+    "nie_jadla": ("brak kolacji", {"glod": 1}, False),
+    "stres": ("coś stresującego (kłótnia, wypadek, złe wieści)",
+              {"nerwy": 1}, False),
+}
+
 # Umiejętności, w których przeszkadzają nerwy (Rules.md, *Nerwy*).
 NERVE_SKILLS = {"strzelanie", "skradanie", "opatrywanie", "kombinowanie"}
 

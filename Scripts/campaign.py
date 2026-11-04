@@ -1,7 +1,7 @@
 """Zakładanie i przygotowanie kampanii.
 
 Użycie (z katalogu głównego repozytorium):
-  python Scripts/campaign.py nowa <kampania> [--start 1990-03-21T23:30]
+  python Scripts/campaign.py nowa <kampania> [--start 1990-03-22T00:00]
   python Scripts/campaign.py wezel <kampania> <id> --nazwa "<nazwa>" --typ <typ>
         [--gestosc 0-100] [--zrodlo <źródło>] [--swiatlo dzien|polmrok|ciemnosc]
         [--drzwi brak|zwykle|zamek] [--bez-kryjowek]
@@ -231,7 +231,7 @@ def main():
 
     n = sub.add_parser("nowa")
     n.add_argument("kampania")
-    n.add_argument("--start", default="1990-03-21T23:30")
+    n.add_argument("--start", default="1990-03-22T00:00")
 
     w = sub.add_parser("wezel")
     w.add_argument("kampania")

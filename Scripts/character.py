@@ -19,7 +19,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from stiffs import actions, rules  # noqa: E402
+from stiffs import actions, body, rules  # noqa: E402
 from stiffs.core import Campaign, GameError, load_json, rng, run, say  # noqa: E402
 
 CARD = "postac.json"
@@ -52,6 +52,8 @@ def template():
         "adres": {"osiedle": "", "ulica": "", "blok": "", "klatka": "",
                   "pietro": 0, "mieszkanie": ""},
         "dom": "",
+        "start": "",
+        "noc": {"opis": "", "czynnosci": []},
         "bliscy": [{"imie": "", "relacja": "", "gdzie": ""}],
     }
 
@@ -137,6 +139,12 @@ def check(card, state, cat):
         errors.append(f"Dom: „{home}” nie jest węzłem mapy kampanii. "
                       "Najpierw dodaj węzeł mieszkania (campaign.py wezel).")
 
+    start = card.get("start")
+    if start and start not in state["wezly"]:
+        errors.append(f"Start: „{start}” nie jest węzłem mapy kampanii. "
+                      "Puste pole oznacza start w domu.")
+    errors += check_night(card, first=not state.get("postac"))
+
     rel = card.get("bliscy", [])
     if not rules.RELATIVES_MIN <= len(rel) <= rules.RELATIVES_MAX:
         errors.append(f"Bliskich: {rules.RELATIVES_MIN}–"
@@ -146,6 +154,46 @@ def check(card, state, cat):
                    for k in ("imie", "relacja", "gdzie")):
             errors.append("Każdy bliski: imię, relacja i gdzie był tej nocy.")
     return errors, tags
+
+
+def check_night(card, first):
+    """Noc zero: opowieść gracza i wiersze tabeli (Rules.md, *Noc zero*)."""
+    night = card.get("noc") or {}
+    acts = night.get("czynnosci") or []
+    errors = []
+    if first and not str(night.get("opis", "")).strip():
+        errors.append("Noc zero: opisz, co postać robiła od wieczora 21 "
+                      "marca do północy (pole noc.opis).")
+    if first and not acts:
+        errors.append("Noc zero: wybierz co najmniej jedną czynność "
+                      "(noc.czynnosci): " + ", ".join(rules.NIGHT_ACTIVITIES)
+                      + ".")
+    for a in acts:
+        if a not in rules.NIGHT_ACTIVITIES:
+            errors.append(f"Noc zero: nieznana czynność „{a}”. Znane: "
+                          + ", ".join(rules.NIGHT_ACTIVITIES) + ".")
+    return errors
+
+
+STAT_NAMES = {"zmeczenie": "zmęczenie", "glod": "głód", "nerwy": "nerwy"}
+
+
+def apply_night(state, char, acts):
+    """Skutki nocy zero na starcie. Zwraca opis do wypisania."""
+    limits = {"zmeczenie": 5, "glod": 5, "nerwy": 10}
+    lines = []
+    for a in dict.fromkeys(acts):
+        label, effects, alcohol = rules.NIGHT_ACTIVITIES[a]
+        bits = []
+        for stat, delta in effects.items():
+            char[stat] = rules.clamp(char[stat] + delta, 0, limits[stat])
+            bits.append(f"{STAT_NAMES[stat]} {rules.signed(delta)}")
+        if alcohol:
+            body.add_timed_modifier(state, char, "alkohol", -1,
+                                    body.VODKA_MINUTES)
+            bits.append("−1 krok do wszystkiego przez 2 godziny")
+        lines.append(f"{label}: " + (", ".join(bits) if bits else "bez skutku"))
+    return lines
 
 
 # --- ekwipunek ---------------------------------------------------------------
@@ -253,7 +301,7 @@ def can_create(state):
                         "raz, więc postaci nie tworzy się od nowa.")
 
 
-def summary(card, tags, cat):
+def summary(card, tags, cat, state_nodes):
     s = card["umiejetnosci"]
     say(f"{card['imie']} {card['nazwisko']}, {card['wiek']} lat, "
         f"{card['zawod']}", "jasny")
@@ -267,9 +315,18 @@ def summary(card, tags, cat):
     say(f"Adres: {a.get('osiedle')}, {a.get('ulica', '')} {a.get('blok')}"
         f", klatka {a.get('klatka', '?')}, piętro {a.get('pietro', '?')}"
         f", m. {a.get('mieszkanie', '?')}")
+    start = card.get("start") or card["dom"]
+    night = card.get("noc") or {}
+    if night.get("opis"):
+        say(f"Noc zero: {night['opis']}")
+    say(f"Start: {state_nodes.get(start, start)}")
     say("Bliscy: " + "; ".join(
         f"{r['imie']} ({r['relacja']}), tej nocy: {r['gdzie']}"
         for r in card["bliscy"]))
+
+
+def node_names(state):
+    return {k: v["nazwa"] for k, v in state["wezly"].items()}
 
 
 def cmd_sprawdz(args):
@@ -282,7 +339,7 @@ def cmd_sprawdz(args):
         for e in errors:
             say(f"- {e}")
         sys.exit(1)
-    summary(card, tags, cat)
+    summary(card, tags, cat, node_names(camp.state))
     say("Karta jest poprawna. Utworzenie: character.py utworz.", "zielony")
 
 
@@ -324,6 +381,14 @@ def cmd_utworz(args):
         "rany": [], "znaczniki": {}, "swiatlo": False,
         "aktywnosc_min": 0, "krytyczny": False, "martwy": False,
     }
+    start = card.get("start") or card["dom"]
+    night = card.get("noc") or {}
+    night_lines = []
+    if not state.get("postac") and night.get("czynnosci"):
+        night_lines = apply_night(state, char, night["czynnosci"])
+    if night.get("opis"):
+        char["noc"] = {"opis": night["opis"],
+                       "czynnosci": list(night.get("czynnosci", []))}
     items = starting_equipment(card, tags, cat)
 
     if old:
@@ -333,9 +398,9 @@ def cmd_utworz(args):
             if item.get("gdzie", "przy_sobie") == "przy_sobie":
                 item["gdzie"] = state["lokacja"].get("wezel")
                 item["przy_zwlokach"] = old["imie"]
-        state["lokacja"]["wezel"] = card["dom"]
-    elif not state["lokacja"].get("wezel"):
-        state["lokacja"]["wezel"] = card["dom"]
+        state["lokacja"]["wezel"] = start
+    elif card.get("start") or not state["lokacja"].get("wezel"):
+        state["lokacja"]["wezel"] = start
 
     state["postac"] = char
     state["ekwipunek"] += items
@@ -345,7 +410,12 @@ def cmd_utworz(args):
     camp.save()
     (camp.path / CARD).rename(camp.path / f"postac.{number}.json")
 
-    summary(card, tags, cat)
+    summary(card, tags, cat, node_names(state))
+    if night_lines:
+        say()
+        say("Skutki nocy zero:", "jasny")
+        for line in night_lines:
+            say("- " + line)
     say()
     say("Ekwipunek startowy (losowany):", "jasny")
     for where, label in (("przy_sobie", "Przy sobie"),

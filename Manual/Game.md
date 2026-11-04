@@ -46,7 +46,7 @@ Część gry jest ukryta przed graczem: scenariusz, ziarno losu bliskich i sąsi
 
 ## Jak wygląda kampania
 
-1. **Postać.** Gracz tworzy ją w rozmowie z MG: imię, kim był, tagi, słabość, Rzecz, rozdanie punktów oraz adres i bliscy. Postać ma być ogólnym ocalałym, a nie specjalistą.
+1. **Postać.** Gracz tworzy ją w rozmowie z MG: imię, kim był, tagi, słabość, Rzecz, rozdanie punktów oraz adres i bliscy. Postać ma być ogólnym ocalałym, a nie specjalistą. MG zawsze pyta też o **noc zero**: gdzie postać była i co robiła od wieczora w środę 21 marca do północy. Od tego zależy, gdzie zaczyna się gra (w domu, w szpitalu, w pracy, gdziekolwiek) i w jakim stanie postać wchodzi w tę noc.
 2. **Mapa i scenariusz.** MG wymyśla przygodę: fabułę, cele, miejsca, ludzi i zwroty akcji. Zegary zagrożeń tykają niezależnie od gracza. Po starcie kampanii scenariusz jest zamrożony.
 3. **Sesje.** Gra toczy się rundami opisanymi wyżej. Pierwsza noc jest najbardziej chaotyczna, bo świat dopiero uczy się, że zmarli wstają. Z każdym dniem wiedza rośnie, a zasoby maleją.
 4. **Zapis.** Kampania żyje w folderze `Campaigns/<kampania>/`. Stan zapisują wyłącznie skrypty, a MG prowadzi kronikę (`journal.md`), żeby po przerwie wrócić do gry w tym samym miejscu.

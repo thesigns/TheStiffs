@@ -344,10 +344,29 @@ Lista akcji zostaje zapisana w `state.json` i zamrożona. MG nie decyduje w trak
 ### Kim jest postać
 
 Oprócz liczb każda postać ma:
-- **Adres:** osiedle, blok i klatkę. To miejsce startu, wiedza o okolicy i sąsiedzi wpisani do scenariusza.
+- **Adres:** osiedle, blok i klatkę. To dom postaci: wiedza o okolicy, sąsiedzi wpisani do scenariusza i miejsce, do którego może chcieć wrócić. Nie musi to być miejsce startu (zob. *Noc zero*).
+- **Noc zero:** co postać robiła od wieczora 21 marca do północy i gdzie była (zob. niżej).
 - **Bliskich:** 1–2 osoby, które postać chce odnaleźć albo ochronić, na przykład żonę na nocnej zmianie w Szpitalu Bródnowskim albo matkę na Pradze za rzeką. Ich los losuje ziarno scenariusza.
 - **Słabość:** jedna z katalogu `Scripts/data/weaknesses.json` (krótkowzroczność, astma, wiek, chore kolano, niedosłuch, nałóg nikotynowy lub alkoholowy, lęk przed ciemnością). Ma skutek mechaniczny w określonych sytuacjach, np. bez okularów −2 kroki do Czujności i Strzelania.
 - **Rzecz:** jeden przedmiot związany z życiorysem, wybrany z listy rzeczy jednego z tagów postaci, np. drąg do zwrotnic tramwajarza, dwururka myśliwego, maluch kierowcy.
+
+### Noc zero
+
+Zmarli wstają o północy czasu polskiego, a kampania zaczyna się o **00:00 22 marca**. Zanim powstanie scenariusz, MG pyta gracza zawsze to samo: **„Gdzie była twoja postać i co robiła od wieczora w środę 21 marca do północy?”** Odpowiedź ustala dwie rzeczy:
+
+- **Miejsce startu.** Może to być dom, miejsce pracy (szpital, zajezdnia, komisariat), mieszkanie znajomego, piwnica, dowolne. Gracz sam podaje powód. MG nie ocenia wiarygodności i nie odmawia: jeśli gracz chce zacząć w piwnicy z dwururką, zaczyna tam, o ile dwururka wynika z reguł. Opowieść ustala **miejsce i czynność, a nie ekwipunek.** Przy sobie postać ma tylko to, co daje tabela, Rzecz z tagu i to, co zapisze scenariusz. Rzeczy z domu zostają w domu, w węźle mieszkania. Miejsce startu nie czyni postaci bezpieczniejszą: zagrożenia w scenariuszu są prawdziwe.
+- **Skutki na starcie.** Czynności z poniższej tabeli ustawiają zmęczenie, głód albo nerwy pierwszej postaci kampanii (przy następnych postaciach opowieść jest tylko tłem). Można łączyć wiersze.
+
+| Czynność | Skutek na starcie |
+|---|---|
+| `spala`: spanie przez co najmniej 3 godziny | brak |
+| `odpoczywala`: odpoczynek, kolacja, spokój | brak |
+| `pracowala`: dyżur, zmiana, ciężka praca | zmęczenie +1 |
+| `pila`: alkohol | zmęczenie +1, −1 krok do wszystkiego przez 2 godziny (jak `inv.py alkohol`) |
+| `nie_jadla`: brak kolacji | głód +1 |
+| `stres`: kłótnia, wypadek, złe wieści | nerwy +1 |
+
+Odpowiedź gracza (opis, czynności i miejsce startu) trafia do karty postaci i do polecenia dla agenta, który pisze scenariusz. Scenariusz opisuje początek z miejsca startu, a nie od drzwi mieszkania, a zdarzenia nocy działają według `Stiffs.md`: do ok. 5:00 nikt nie wie, co się dzieje.
 
 ### Ekwipunek
 
@@ -366,11 +385,11 @@ Przedmioty zużywane porcjami (papierosy, alkohol, środki odkażające, cukier,
 
 ### Tworzenie postaci krok po kroku
 
-1. MG zakłada węzeł mapy z mieszkaniem postaci (`campaign.py wezel`).
-2. Gracz poznaje możliwości: `character.py opcje`.
-3. MG pyta gracza o postać i wpisuje odpowiedzi do karty `Campaigns/<kampania>/postac.json` (pusta karta: `character.py szablon`). Gracz może też wypełnić kartę sam.
+1. Gracz poznaje możliwości: `character.py opcje`.
+2. MG pyta gracza o postać, w tym zawsze o **noc zero** (zob. wyżej), i zakłada węzły mapy: mieszkanie postaci (`campaign.py wezel`) oraz miejsce startu, jeśli jest inne niż dom.
+3. MG wpisuje odpowiedzi do karty `Campaigns/<kampania>/postac.json` (pusta karta: `character.py szablon`; pola `noc` i `start`). Gracz może też wypełnić kartę sam.
 4. `character.py sprawdz` pokazuje błędy albo podsumowanie.
-5. `character.py utworz` losuje ekwipunek i zapisuje postać do stanu gry. Karta zostaje przeniesiona do `postac.<numer>.json`.
+5. `character.py utworz` losuje ekwipunek, stosuje skutki nocy zero, ustawia postać w miejscu startu i zapisuje ją do stanu gry. Karta zostaje przeniesiona do `postac.<numer>.json`.
 
 Po śmierci postaci tworzy się następną tak samo. Rzeczy zmarłego zostają przy jego zwłokach.
 
