@@ -86,7 +86,7 @@ W długiej sesji Claude Code kompaktuje kontekst i MG może zapomnieć zasady. D
 ## Pliki kampanii
 
 ```
-Campaigns/<nazwa>/
+Campaigns/<nazwa>/     – nazwa to imię i nazwisko pierwszej postaci, np. anna_kloc
   scenario.md   – scenariusz, przygotowany przed startem, potem zamrożony
   addenda.md    – dopiski do scenariusza po starcie, tylko przez skrypt
   state.json    – stan gry, zapisywany wyłącznie przez skrypty

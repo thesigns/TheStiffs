@@ -104,7 +104,9 @@ Wszystkie komendy uruchamia się z katalogu głównego repozytorium
 ### 2. Mapa i postać (jawne)
 
 1. `campaign.py nowa <kampania> --start 1990-03-22T00:00` (zmarli wstają
-   o północy).
+   o północy). Folder kampanii nazywa się imieniem i nazwiskiem pierwszej
+   postaci, małymi literami, bez polskich znaków, ze znakiem `_`, np.
+   `anna_kloc`. Nazwa zostaje, gdy po śmierci gracz zakłada nową postać.
 2. Węzły i połączenia: `campaign.py wezel` i `campaign.py polacz`.
    - Mieszkanie postaci: `--gestosc 0 --drzwi zamek`. Jeśli postać zaczyna
      gdzie indziej (szpital, praca), dodaj też węzeł miejsca startu i
