@@ -54,3 +54,29 @@ W sporze o to, czy odpowiedź mieści się w świecie, MG nie ustępuje pod naci
 Nie ma limitu liczby przedmiotów ani katalogu, z którego trzeba wybierać. Przy sobie postać ma to, co mieści w kieszeniach i torbie i co ma sens dla jej zawodu i wieczoru: pielęgniarka na dyżurze ma torbę z lekami i opatrunkami, a nie rewolwer. MG pyta „gdzie to nosisz?” i patrzy, czy się to mieści. To samo kryterium stosuje do wszystkich postaci.
 
 Rzeczy, które postać ma w domu, zostają w domu, w miejscu, do którego może wrócić.
+
+## Rzut monetą (50/50)
+
+Rzut monetą to najważniejsza zasada tej gry. Kiedy nie ma innej odpowiedzi, rozstrzyga **rzut monetą: 50% na TAK, 50% na NIE**. Moneta nie ma stronnictwa. Nie zależy od tego, co wypada narracyjnie, ani od tego, kto się bardziej upiera. Rzut wykonuje skrypt (`act.py los "<pytanie>"`), a MG i gracz przyjmują wynik.
+
+### Kiedy rzucamy
+
+1. **Spór między graczem a MG.** MG przedstawia swoje stanowisko i jego powód jeden raz, gracz przedstawia swoje jeden raz. Jeśli się nie zgadzają, nie ma dalszej dyskusji: rzucamy. Dotyczy to interpretacji zasad, tego, czy odpowiedź gracza mieści się w świecie, i każdego innego sporu.
+2. **Pytanie o świat, na które nie ma odpowiedzi** w Manualu, w scenariuszu ani w tabelach: czy ktoś za zamkniętymi drzwiami żyje, czy w sklepie zostało jeszcze mleko, czy ktoś się obudzi od hałasu.
+3. **Reakcja NPC, której nie rozstrzyga jego agenda** w scenariuszu.
+4. **Gracz prosi o rzut.** Gracz może zażądać rzutu monetą zawsze, gdy uważa, że MG naginął wynik.
+
+Jeśli scenariusz podaje szansę (np. „60%, że ktoś usłyszy”), rzucamy z tą szansą zamiast 50/50 (`act.py los --szansa N`). Jeśli odpowiedź jest w Manualu, scenariuszu albo tabeli, nie rzucamy.
+
+### Jak rzucamy
+
+- **Pytanie zadajemy przed rzutem**, w formie, na którą TAK i NIE oznaczają dwie jasno różne rzeczy. MG formułuje je neutralnie, bez podpowiadania wyniku. W sporze TAK oznacza wersję gracza, a NIE wersję MG.
+- **Wynik jest wiążący.** Nie przerzucamy go i nie pytamy o to samo drugi raz w tej samej sytuacji. Fart (punkt, którym gracz może poprawić wynik testu) nie zmienia rzutu monetą.
+- **Wynik dla sporu o zasady** trafia do `rulings.md` jako precedens i obowiązuje do końca kampanii. Wynik dla pytania o świat zapisuje się w logu i od tej chwili jest prawdą w świecie.
+- **MG opowiada wynik dokładnie**, bez łagodzenia, i bez dopisywania, że „na szczęście”.
+
+### Czego nie robimy
+
+- MG nie używa rzutu monetą, żeby uniknąć decyzji, którą powinien podjąć na podstawie Manuala albo scenariusza.
+- MG nie zadaje rzutu w formie, która przemyca korzyść jednej strony (np. „czy mimo to znajdziesz broń”).
+- Gracz nie prosi o rzut tylko dlatego, że wynik poprzedniego mu się nie podobał.
