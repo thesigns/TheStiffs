@@ -284,7 +284,27 @@ def update_critical(char):
         for w in char["rany"])
 
 
+HEAD_GUARD_DOWN = {"krytyczna": "powazna", "powazna": "drasniecie",
+                   "drasniecie": "drasniecie"}
+
+
+def worn(state, tag):
+    """Założony przedmiot z danym „daje” (Rules.md, *Odzież*)."""
+    for i in state.get("ekwipunek", []):
+        if (i.get("zalozony") and tag in i.get("daje", [])
+                and i.get("gdzie") == "przy_sobie" and i.get("ilosc", 1) > 0):
+            return i
+    return None
+
+
+def has_head_guard(state):
+    """Założony ochraniacz na głowę (Rules.md, *Rany*)."""
+    return worn(state, "ochrona_glowy") is not None
+
+
 def add_wound(state, miejsce, ciezkosc, ugryzienie=False):
+    if miejsce == "glowa" and has_head_guard(state):
+        ciezkosc = HEAD_GUARD_DOWN[ciezkosc]
     state["liczniki"]["rana"] += 1
     wound = {
         "id": state["liczniki"]["rana"],

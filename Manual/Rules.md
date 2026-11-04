@@ -331,7 +331,7 @@ Postać ma dziewięć umiejętności w skali 1–5:
 
 ### Życiorys
 
-Postać ma 2–3 **tagi życiorysu**. Katalog tagów jest w `Scripts/data/tags.json`, m.in.: *zasadnicza służba*, *tramwajarz*, *pielęgniarka*, *badylarz z działki*, *cinkciarz*, *harcerz*, *ministrant*, *hydraulik ze spółdzielni*, *kierowca*, *myśliwy*, *milicjant*, *ekspedientka*. Gracz może też zaproponować własny tag; wtedy musi on spełniać te same warunki co tagi z katalogu.
+Postać ma 2–3 **tagi życiorysu**. Katalog tagów jest w `Scripts/data/tags.json`, m.in.: *zasadnicza służba*, *tramwajarz*, *pielęgniarka*, *badylarz z działki*, *cinkciarz*, *harcerz*, *ministrant*, *hydraulik ze spółdzielni*, *kierowca*, *myśliwy*, *milicjant*, *ekspedientka*, *sztuki walki* (ogólnie: boks, judo, karate; +1 krok do ataku, odepchnięcia, wyrwania się z uchwytu i skoku). Gracz może też zaproponować własny tag; wtedy musi on spełniać te same warunki co tagi z katalogu.
 
 Każdy tag ma:
 - **listę 3–5 akcji lub miejsc**, w których daje +1 krok,
@@ -355,6 +355,7 @@ Oprócz liczb każda postać ma:
 Zmarli wstają o północy czasu polskiego, a kampania zaczyna się o **00:00 22 marca**. Zanim powstanie scenariusz, MG pyta gracza zawsze to samo: **„Gdzie była twoja postać i co robiła od wieczora w środę 21 marca do północy?”** Odpowiedź ustala dwie rzeczy:
 
 - **Miejsce startu.** Może to być dom, miejsce pracy (szpital, zajezdnia, komisariat), mieszkanie znajomego, piwnica, dowolne. Gracz sam podaje powód. MG nie ocenia wiarygodności i nie odmawia: jeśli gracz chce zacząć w piwnicy z dwururką, zaczyna tam, o ile dwururka wynika z reguł. Opowieść ustala **miejsce i czynność, a nie ekwipunek.** Przy sobie postać ma tylko to, co daje tabela, Rzecz z tagu i to, co zapisze scenariusz. Rzeczy z domu zostają w domu, w węźle mieszkania. Miejsce startu nie czyni postaci bezpieczniejszą: zagrożenia w scenariuszu są prawdziwe.
+- **Odzież.** Gracz mówi też, co postać miała na sobie (jedna rzecz na tułowiu, a ochraniacz na głowie tylko jeśli jest jej Rzeczą). Zapisuje się to w polu `nosi` karty.
 - **Skutki na starcie.** Czynności z poniższej tabeli ustawiają zmęczenie, głód albo nerwy pierwszej postaci kampanii (przy następnych postaciach opowieść jest tylko tłem). Można łączyć wiersze.
 
 | Czynność | Skutek na starcie |
@@ -380,6 +381,10 @@ Każda zmiana ekwipunku idzie przez skrypt:
 - **zysk** spoza tabel (`inv.py zysk --powod`) tylko wtedy, gdy przedmiot stoi w scenariuszu (np. opisana zawartość lokacji) albo wynika z rzutu; nigdy dlatego, że przydałby się postaci,
 - **strata** (`inv.py strata --powod`) wtedy, gdy wynika z rzutu albo z decyzji gracza,
 - **wymiana** z NPC (`inv.py wymien`) po teście Kombinowania; jego numer podaje się w `--wycena`.
+
+### Odzież
+
+Przedmioty z miejscem (tułów: kurtka, kożuch, fartuch, sweter, piżama; głowa: ochraniacz) działają tylko wtedy, gdy są **założone**. Kurtka w plecaku nie chroni. Na jednym miejscu można mieć jeden przedmiot. Założenie i zdjęcie zajmują 1 minutę (`inv.py zaloz`, `inv.py zdejmij`) i są niemożliwe w trakcie starcia. Gruba odzież i ochraniacz mają skutek opisany w *Rany* i *Uchwycenie*. Co postać miała na sobie o północy, mówi gracz w opowieści o nocy zero (niewiarygodnej kurtki MG nie podważa, ale bez niej, np. w piżamie, nie ma ochrony).
 
 Przedmioty zużywane porcjami (papierosy, alkohol, środki odkażające, cukier, zapałki) mają licznik napoczętej sztuki.
 
@@ -463,6 +468,8 @@ Nie ma punktów życia. Każda rana ma miejsce (głowa, tułów, ręka, noga) i 
 | draśnięcie | brak kary, ryzyko zakażenia | brak |
 | poważna | −1 krok do pasujących akcji | lekkie |
 | krytyczna | −2 kroki do pasujących akcji | silne |
+
+**Ochraniacz na głowę** (np. bokserski), założony, obniża ciężkość każdej rany głowy o jeden stopień: krytyczna staje się poważna, poważna staje się draśnięciem. Dotyczy też ugryzienia w twarz albo szyję.
 
 Kara z ran liczy się według najgorszej rany w miejscu, którego dotyczy akcja. To, że ran jest wiele, mierzy tor utraty krwi.
 
@@ -755,7 +762,7 @@ Zamiast w mózg można uderzyć albo strzelić w oczy (`fight.py atak --oczy`, `
   - **wyrwać się:** test Kondycji, −1 krok za każdego dodatkowego sztywnego, który ją trzyma,
   - **walczyć z bliska:** krótką bronią bez kary; długa broń daje −2 kroki.
 - Przy chwycie sztywny może ugryźć od razu. Potem w każdej wymianie każdy trzymający sztywny rzuca na **ugryzienie**. Ugryzienie to rana poważna w losowym miejscu, a twarz lub szyja to rana krytyczna. Każde ugryzienie: nerwy +1.
-- **Ubranie chroni.** Gruba odzież (kożuch, skórzana kurtka, waciak, zimowy mundur) chroni ręce i tułów: ugryzienie w te miejsca ma 1 szansę na 3, że nie przebije materiału i nie zostawi rany. Kurtka ortalionowa, sweter i piżama nie chronią. Ochronę zapisuje się przy przedmiocie *(skrypt: do zrobienia)*.
+- **Ubranie chroni, jeśli jest założone** (zob. *Odzież*). Gruba odzież (kożuch, kurtka skórzana albo puchowa, waciak, zimowy mundur) chroni ręce i tułów: ugryzienie w te miejsca ma 1 szansę na 3, że nie przebije materiału i nie zostawi rany (nerwy +1 jak przy każdym ugryzieniu). Fartuch lekarski, kurtka ortalionowa, sweter i piżama nie chronią, a kurtka niesiona w plecaku też nie.
 - Gdy postać trzyma trzech lub więcej sztywnych, skrypt co wymianę rzuca na **rozszarpanie**, czyli śmierć (zob. `Stiffs.md`: kilku sztywnych potrafi rozerwać dorosłego mężczyznę).
 
 | Szansa na wymianę | Świeżak | Gnilec |
@@ -778,6 +785,8 @@ Dane broni są w `Scripts/data/weapons.json`:
 | młotek | 2 | 3–4 | 0 | 5% | tak |
 | saperka | 2 | 3 | 0 | 10% | nie |
 | pałka | 2 | 3 | −1 | – | nie |
+| kij | 2 | 3 | −1 | – | nie |
+| nunczako | 2 | 3 | −1 | – | nie |
 | nóż | 1 | 3–4 | −1 w strefie 3, +1 w strefie 4 | 15% | tak |
 | dwururka | 5 | 2–3 | +1 w strefie 3 | – | nie; 2 naboje, potem przeładowanie |
 | kałach | 5 | 1–3 | 0 (seria +1, 3 naboje) | – | nie; magazynek 30 |
@@ -902,6 +911,7 @@ Zestaw skryptów (✔ = gotowy):
 | `encounter.py` ✔ | spotkania (losowane samoczynnie), kto zauważył pierwszy, zasadzki, unik, tożsamość sztywnych, broń w ręku, kryjówka |
 | ~~`stiff_people.py`~~ | wbudowany w spotkania (`stiffs/encounter.py`, `data/people.json`) |
 | ~~`search.py`~~ | przeszukanie to akcja w `act.py` (`stiffs/loot.py`, `data/loot.json`) |
+| `inv.py` odzież ✔ | `zaloz` i `zdejmij`: ubranie i ochraniacz działają tylko założone |
 | `rise.py` ✔ | rejestr ciał, moment powstania, zniszczenie, związanie, spalenie; `--bez-mozgu` dla śmierci, która sama zniszczyła mózg |
 | `halasujacy.py` ✔ | nieświadomi hałasujący (dzieci, zwierzęta): rejestr, ukrycie postaci; rzuty w tle co jednostkę czasu |
 | `dawn.py` ✔ | podgląd doby; rozliczenie świtu dzieje się samo (`stiffs/body.py`), sen to `act.py spij` |

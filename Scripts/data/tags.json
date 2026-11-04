@@ -95,5 +95,12 @@
     "dostepy": ["zna zaplecza sklepów i hurtownie", "wie, co trzymano spod lady"],
     "rzeczy": [{"przedmiot": "klucze_sklep", "ilosc": 1}, {"przedmiot": "konserwa", "ilosc": 8}],
     "przedmioty": [{"przedmiot": "ocet", "szansa": 60, "ilosc": [1, 3]}]
+  },
+  "sztuki_walki": {
+    "nazwa": "sztuki walki",
+    "opis": "Klub, sala treningowa, sparingi. Boks, judo albo karate: dres, pot i ktoś, kto nie boi się oddać.",
+    "akcje": ["atak", "odepchniecie", "wyrwanie", "skok"],
+    "dostepy": ["zna salę treningową i ludzi z klubu: trenerów i sparingpartnerów", "wie, jak bezpiecznie upaść i wstać"],
+    "rzeczy": [{"przedmiot": "kij", "ilosc": 1}, {"przedmiot": "nunczako", "ilosc": 1}, {"przedmiot": "ochraniacz_glowy", "ilosc": 1}]
   }
 }

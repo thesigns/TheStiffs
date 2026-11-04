@@ -54,6 +54,7 @@ def template():
         "dom": "",
         "start": "",
         "noc": {"opis": "", "czynnosci": []},
+        "nosi": [],
         "bliscy": [{"imie": "", "relacja": "", "gdzie": ""}],
     }
 
@@ -144,6 +145,7 @@ def check(card, state, cat):
         errors.append(f"Start: „{start}” nie jest węzłem mapy kampanii. "
                       "Puste pole oznacza start w domu.")
     errors += check_night(card, first=not state.get("postac"))
+    errors += check_worn(card, cat)
 
     rel = card.get("bliscy", [])
     if not rules.RELATIVES_MIN <= len(rel) <= rules.RELATIVES_MAX:
@@ -176,6 +178,36 @@ def check_night(card, first):
 
 
 STAT_NAMES = {"zmeczenie": "zmęczenie", "glod": "głód", "nerwy": "nerwy"}
+
+
+def check_worn(card, cat):
+    """Co postać ma na sobie na starcie (Rules.md, *Odzież*)."""
+    errors, slots = [], {}
+    for item_id in card.get("nosi", []):
+        spec = cat["przedmioty"].get(item_id)
+        if not spec or not spec.get("slot"):
+            errors.append(f"Nosi: „{item_id}” nie jest odzieżą ani "
+                          "ochraniaczem z katalogu.")
+            continue
+        if spec["slot"] != "tulow" and item_id != card.get("rzecz"):
+            errors.append(f"Nosi: „{item_id}” na starcie tylko jako Rzecz "
+                          "postaci.")
+        if spec["slot"] in slots:
+            errors.append(f"Nosi: dwa przedmioty na jednym miejscu "
+                          f"({spec['slot']}).")
+        slots[spec["slot"]] = item_id
+    return errors
+
+
+def wear_at_start(items, card, cat):
+    """Zakłada przedmioty z karty. Brakującą odzież dodaje przy sobie."""
+    for item_id in card.get("nosi", []):
+        item = next((i for i in items if i["id"] == item_id
+                     and i["gdzie"] == "przy_sobie"), None)
+        if not item:
+            item = make_items([(item_id, 1, "przy_sobie")], cat)[0]
+            items.append(item)
+        item["zalozony"] = True
 
 
 def apply_night(state, char, acts):
@@ -221,6 +253,8 @@ def make_items(rolled, cat):
                 "daje": list(spec.get("daje", [])), "gdzie": where}
         if spec.get("akcje"):
             item["akcje"] = list(spec["akcje"])
+        if spec.get("slot"):
+            item["slot"] = spec["slot"]
         items.append(item)
     return items
 
@@ -319,10 +353,18 @@ def summary(card, tags, cat, state_nodes):
     night = card.get("noc") or {}
     if night.get("opis"):
         say(f"Noc zero: {night['opis']}")
+    if card.get("nosi"):
+        say("Na sobie: " + ", ".join(
+            catalog_names().get(i, i) for i in card["nosi"]))
     say(f"Start: {state_nodes.get(start, start)}")
     say("Bliscy: " + "; ".join(
         f"{r['imie']} ({r['relacja']}), tej nocy: {r['gdzie']}"
         for r in card["bliscy"]))
+
+
+def catalog_names():
+    return {k: v["nazwa"] for k, v in load_json("items.json").items()
+            if isinstance(v, dict) and "nazwa" in v}
 
 
 def node_names(state):
@@ -390,6 +432,7 @@ def cmd_utworz(args):
         char["noc"] = {"opis": night["opis"],
                        "czynnosci": list(night.get("czynnosci", []))}
     items = starting_equipment(card, tags, cat)
+    wear_at_start(items, card, cat)
 
     if old:
         state.setdefault("polegli", []).append(old)

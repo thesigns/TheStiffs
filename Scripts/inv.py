@@ -7,6 +7,8 @@ Użycie:
   python Scripts/inv.py <kampania> lista
   python Scripts/inv.py <kampania> wez <nr> [--ilosc N]
   python Scripts/inv.py <kampania> odloz <nr> [--ilosc N]
+  python Scripts/inv.py <kampania> zaloz <nr>      (odzież, ochraniacz)
+  python Scripts/inv.py <kampania> zdejmij <nr>
   python Scripts/inv.py <kampania> jedz [<nr>]
   python Scripts/inv.py <kampania> pij [<nr>] [--litry N]
   python Scripts/inv.py <kampania> gotuj [--litry N]
@@ -43,6 +45,8 @@ def label(item):
         text += f" (napoczęte: {item['napoczete']}/{portions})"
     if item.get("przy_zwlokach"):
         text += f" (przy zwłokach: {item['przy_zwlokach']})"
+    if item.get("zalozony"):
+        text += " (założony)"
     return text
 
 
@@ -69,11 +73,13 @@ def move(state, item, qty, where):
     if qty == item.get("ilosc", 1):
         item["gdzie"] = where
         item.pop("przy_zwlokach", None)
+        item.pop("zalozony", None)
         moved = item
     else:
         item["ilosc"] -= qty
         moved = {k: v for k, v in item.items() if k not in SPECIAL}
         moved.update(ilosc=qty, gdzie=where)
+        moved.pop("zalozony", None)
         state["ekwipunek"].append(moved)
     # Scal z takim samym przedmiotem w miejscu docelowym.
     if not any(k in moved for k in SPECIAL):
@@ -167,6 +173,42 @@ def cmd_wez(camp, args):
     camp.log("ekwipunek", ruch="wez", przedmiot=got["id"],
              ilosc=args.ilosc or got.get("ilosc", 1), z_zwlok=was)
     say(f"Wzięte: {label(got)}.")
+
+
+def cmd_zaloz(camp, args):
+    calm(camp)
+    state = camp.state
+    item = by_number(state, args.nr)
+    if item.get("gdzie") != "przy_sobie":
+        raise GameError(f"„{item['nazwa']}” nie jest przy postaci.")
+    slot = item.get("slot")
+    if not slot:
+        raise GameError(f"„{item['nazwa']}” nie jest odzieżą ani ochraniaczem.")
+    if item.get("zalozony"):
+        raise GameError(f"„{item['nazwa']}” jest już założony.")
+    for other in state["ekwipunek"]:
+        if other.get("zalozony") and other.get("slot") == slot:
+            raise GameError(f"Najpierw trzeba zdjąć: {other['nazwa']}.")
+    if item.get("ilosc", 1) > 1:
+        item["ilosc"] -= 1
+        item = {k: v for k, v in item.items() if k != "zalozony"}
+        item["ilosc"] = 1
+        state["ekwipunek"].append(item)
+    item["zalozony"] = True
+    camp.log("ekwipunek", ruch="zaloz", przedmiot=item["id"])
+    lines = [("stan", f"Założone: {item['nazwa']}.")]
+    ui.show(spend(camp, 1, 0, lines))
+
+
+def cmd_zdejmij(camp, args):
+    calm(camp)
+    item = by_number(camp.state, args.nr)
+    if not item.get("zalozony"):
+        raise GameError(f"„{item['nazwa']}” nie jest założony.")
+    item.pop("zalozony")
+    camp.log("ekwipunek", ruch="zdejmij", przedmiot=item["id"])
+    lines = [("stan", f"Zdjęte: {item['nazwa']}.")]
+    ui.show(spend(camp, 1, 0, lines))
 
 
 def cmd_odloz(camp, args):
@@ -441,6 +483,8 @@ def main():
         sp = sub.add_parser(name)
         sp.add_argument("nr", type=int)
         sp.add_argument("--ilosc", type=int)
+    for name in ("zaloz", "zdejmij"):
+        sub.add_parser(name).add_argument("nr", type=int)
     sp = sub.add_parser("jedz")
     sp.add_argument("nr", type=int, nargs="?")
     sp = sub.add_parser("pij")

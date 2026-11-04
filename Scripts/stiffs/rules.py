@@ -145,6 +145,7 @@ NOISY_KINDS = {
 CHILD_BASE_CHANCE = 20
 CHILD_CHANCE_PER_YEAR = 2
 CHILD_MAX_AGE = 9            # od 10 lat dziecko jest zwykłym NPC
+BODY_GUARD_CHANCE = 33        # gruba odzież: ugryzienie w rękę i tułów nie przebija
 NOISY_LOUD_BONUS = 10        # w minionej jednostce w węźle był hałas ≥ 3
 NOISY_LOUD_LEVEL = 3
 AMBIENT_NOISE_CHANCE = 5

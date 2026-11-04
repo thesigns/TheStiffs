@@ -345,6 +345,25 @@
       "palka"
     ]
   },
+  "kij": {
+    "nazwa": "Kij",
+    "daje": [
+      "kij"
+    ]
+  },
+  "nunczako": {
+    "nazwa": "Nunczako",
+    "daje": [
+      "nunczako"
+    ]
+  },
+  "ochraniacz_glowy": {
+    "nazwa": "Ochraniacz bokserski na głowę",
+    "daje": [
+      "ochrona_glowy"
+    ],
+    "slot": "glowa"
+  },
   "kajdanki": {
     "nazwa": "Kajdanki",
     "daje": [
@@ -462,5 +481,73 @@
       "bron_palna",
       "kalach"
     ]
+  },
+  "kurtka_skorzana": {
+    "nazwa": "Kurtka skórzana",
+    "daje": [
+      "ubranie",
+      "ochrona_tulowia"
+    ],
+    "slot": "tulow"
+  },
+  "kurtka_puchowa": {
+    "nazwa": "Kurtka puchowa",
+    "daje": [
+      "ubranie",
+      "ochrona_tulowia"
+    ],
+    "slot": "tulow"
+  },
+  "kozuch": {
+    "nazwa": "Kożuch",
+    "daje": [
+      "ubranie",
+      "ochrona_tulowia"
+    ],
+    "slot": "tulow"
+  },
+  "waciak": {
+    "nazwa": "Waciak",
+    "daje": [
+      "ubranie",
+      "ochrona_tulowia"
+    ],
+    "slot": "tulow"
+  },
+  "mundur_zimowy": {
+    "nazwa": "Mundur zimowy",
+    "daje": [
+      "ubranie",
+      "ochrona_tulowia"
+    ],
+    "slot": "tulow"
+  },
+  "fartuch_lekarski": {
+    "nazwa": "Fartuch lekarski",
+    "daje": [
+      "ubranie"
+    ],
+    "slot": "tulow"
+  },
+  "kurtka_ortalionowa": {
+    "nazwa": "Kurtka ortalionowa",
+    "daje": [
+      "ubranie"
+    ],
+    "slot": "tulow"
+  },
+  "sweter": {
+    "nazwa": "Sweter",
+    "daje": [
+      "ubranie"
+    ],
+    "slot": "tulow"
+  },
+  "pizama": {
+    "nazwa": "Piżama",
+    "daje": [
+      "ubranie"
+    ],
+    "slot": "tulow"
   }
 }

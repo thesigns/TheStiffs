@@ -682,12 +682,21 @@ def bite(state, stiff, auto=False):
             place = p
             break
     severity = "krytyczna" if place == "glowa" else "powazna"
-    w = world.add_wound(state, place, severity, ugryzienie=True)
     char = state["postac"]
+    jacket = world.worn(state, "ochrona_tulowia")
+    if place in ("reka", "tulow") and jacket:
+        u_guard = d100()
+        if u_guard <= rules.BODY_GUARD_CHANCE:
+            char["nerwy"] = rules.clamp(char["nerwy"] + 1, 0, 10)
+            return [("sukces", f"#{stiff['id']} gryzie, ale zęby nie przebijają "
+                               f"materiału ({jacket['nazwa']}): "
+                               f"{u_guard} ≤ {rules.BODY_GUARD_CHANCE}. "
+                               "Nerwy +1.")]
+    w = world.add_wound(state, place, severity, ugryzienie=True)
     char["nerwy"] = rules.clamp(char["nerwy"] + 1, 0, 10)
     where = "twarz albo szyja" if place == "glowa" else rules.PLACE_NAMES[place]
     return [("alarm", f"#{stiff['id']} gryzie: {where}. Rana #{w['id']} "
-                      f"({rules.SEVERITY_NAMES[severity]}). Nerwy +1.")]
+                      f"({rules.SEVERITY_NAMES[w['ciezkosc']]}). Nerwy +1.")]
 
 
 def wound(state, place, severity):

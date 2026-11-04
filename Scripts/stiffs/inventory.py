@@ -17,5 +17,7 @@ def add(state, item_id, qty=1, where="przy_sobie"):
             "daje": list(spec.get("daje", [])), "gdzie": where}
     if spec.get("akcje"):
         item["akcje"] = list(spec["akcje"])
+    if spec.get("slot"):
+        item["slot"] = spec["slot"]
     state["ekwipunek"].append(item)
     return item

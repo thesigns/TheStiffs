@@ -91,8 +91,8 @@ Wszystkie komendy uruchamia się z katalogu głównego repozytorium
 1. Pokaż możliwości: `character.py opcje`. Opisz je krótko w czacie.
 2. Zapytaj gracza o postać: imię, kim był, tagi (2–3), słabość, Rzecz,
    rozdanie 7 punktów, adres i bliskich (1–2). **Zawsze** zapytaj też:
-   „Gdzie była twoja postać i co robiła od wieczora w środę 21 marca do
-   północy?” (noc zero, `Rules.md`). Odpowiedź ustala miejsce startu i
+   „Gdzie była twoja postać, co robiła od wieczora w środę 21 marca do
+   północy i w co była ubrana?” (noc zero, `Rules.md`). Odpowiedź ustala miejsce startu i
    czynności z tabeli. Nie oceniaj jej wiarygodności; ekwipunku nie dodaje.
 3. **Nie wymyślaj odpowiedzi za gracza.** Jeśli gracz prosi „ty
    zaproponuj”, zaproponuj konkretną wersję i czekaj na akceptację.
