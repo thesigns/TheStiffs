@@ -10,29 +10,24 @@ Postać powstaje w rozmowie, zanim powstanie scenariusz. MG zadaje graczowi poni
 
 **Kim jest**
 1. Jak ma na imię i nazwisko?
-2. Ile ma lat i jak wygląda (kilka zdań)?
-3. Jaki ma zawód i gdzie pracuje? Na jakiej zmianie?
+2. Ile ma lat i jak wygląda?
+3. Jaki ma zawód i gdzie pracuje?
 4. Co umie dobrze (hobby, wojsko, harcerstwo, sport, sztuki walki), a czego wcale?
 5. Jakie ma słabości i ograniczenia: zdrowie, nałogi, wzrok, wiek, lęki?
 
 **Dom i bliscy**
-6. W jakiej dzielnicy albo na jakim osiedlu mieszka (np. Wola, Bemowo, Jelonki, Sielce)? Gracz nie podaje ulicy ani numeru: ulicę i okolicę dobiera MG w scenariuszu.
+6. W jakiej dzielnicy albo na jakim osiedlu mieszka (np. Wola, Bemowo, Jelonki, Sielce)? Gracz nie musi podawać dokładnego adresu swojej postaci.
 7. W jakim rodzaju budynku (np. jedenastopiętrowy blok z wielkiej płyty z lat 70., kamienica z lat 50., dom jednorodzinny) i ile ma pięter?
-8. Na którym piętrze mieszka (parter, środek, ostatnie)?
+8. Na którym piętrze mieszka?
 9. Z kim mieszka?
-10. Kim są jej bliscy (1–3 osoby): imię, relacja, gdzie byli o północy, czego od nich chce albo się o nich boi?
-11. Których sąsiadów i znajomych zna z imienia?
+10. Kim są jej bliscy: imię, relacja, czy mieszka z nimi?
 
 **Noc zero**
-12. Co robiła wieczorem w środę 21 marca 1990 roku przed północą?
-13. Gdzie była o północy i z kim? To jest miejsce startu.
-14. W co była ubrana?
-15. Co miała przy sobie (kieszenie, torba, plecak) i co ma w domu na wypadek, że tam wróci?
-16. W jakim była stanie: zmęczona, głodna, pijana, zdenerwowana?
-
-**Co ją pcha**
-17. Czego chce przez tę noc i kolejne dni (jedna rzecz)? Czego się boi?
-18. Czy są wątki, które gracz chce poprowadzić, albo takie, których woli uniknąć?
+11. Co robiła wieczorem w środę 21 marca 1990 roku przed północą?
+12. Gdzie była o północy i z kim? To jest miejsce startu.
+13. W co była ubrana?
+14. Co miała przy sobie (kieszenie, torba, plecak) i co ma w domu na wypadek, że tam wróci?
+15. W jakim była stanie: zmęczona, głodna, pijana, zdenerwowana?
 
 ### Kiedy MG może się nie zgodzić
 
@@ -95,8 +90,8 @@ Stopień to liczba całkowita od 0 do 5. Poniższe przykłady nie są zamknięt�
 | 1 | skradanie się, szept, dyszenie ze zmęczenia |
 | 2 | normalne chodzenie, zamknięcie drzwi, zwykła rozmowa, pukanie do drzwi |
 | 3 | walka wręcz, trzaśnięcie drzwiami, przewrócenie czegoś na podłogę, bieg po schodach |
-| 4 | krzyk, tłuczone szkło, wyważanie drzwi, silnik samochodu albo motocykla |
-| 5 | strzał z broni palnej, syrena |
+| 4 | krzyk, stłuczenie szyby, wyważanie drzwi, silnik samochodu albo motocykla |
+| 5 | strzał z broni palnej, syrena, helikopter |
 
 Ta sama skala obejmuje hałas, którego nie robi postać: płacz niemowlęcia, szczekanie psa, pochód, inni ludzie.
 
