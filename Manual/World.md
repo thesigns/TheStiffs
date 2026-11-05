@@ -60,7 +60,7 @@ Polska nie należy do NATO ani do Wspólnot Europejskich. Formalnie wciąż jest
 
 ## Warszawa
 
-Warszawa, stolica, ma około 1,6 miliona mieszkańców. **Wisła** dzieli ją na śródmieście na lewym brzegu i biedniejszą, bardziej szorstką Pragę na prawym. Przez rzekę przechodzi tylko **pięć mostów drogowych**: Grota-Roweckiego, Gdański, Śląsko-Dąbrowski, Poniatowskiego i Łazienkowski, do tego dwa mosty kolejowe (Średnicowy i Gdański kolejowy).
+Warszawa, stolica, ma około 1,6 miliona mieszkańców. **Wisła** dzieli ją na śródmieście na lewym brzegu i biedniejszą, bardziej szorstką Pragę na prawym. Przez rzekę przechodzi tylko **sześć mostów drogowych**: Grota-Roweckiego, Gdański, Śląsko-Dąbrowski, Poniatowskiego, Łazienkowski i tymczasowy wojskowy Most Syreny (z 1985 roku, między Tamką a Wybrzeżem Szczecińskim; wąski, bez tramwajów i bez pieszych, limit 40 km/h), do tego dwa mosty kolejowe (Średnicowy i kolejowy przy Cytadeli).
 
 Nad miastem góruje **Pałac Kultury i Nauki**, stalinowski wieżowiec podarowany miastu w latach pięćdziesiątych jako „dar narodu radzieckiego”, wciąż najwyższy budynek w Polsce. Tuż obok stoi pierwszy zachodni wieżowiec, nowiutki hotel Marriott. **Metra** jeszcze nie ma: budowa ruszyła w 1983 roku i pod ulicami biegną niedokończone tunele.
 
