@@ -12,14 +12,6 @@ To nie jest strzelanka o zombie. To opowieść o przeżywaniu w mieście, w któ
 
 Gra toczy się jak rozmowa. MG opisuje, co postać widzi, słyszy i czuje, i pyta: „Co robisz?”. Gracz mówi, co robi postać, własnymi słowami. MG nie decyduje za postać i nie podsuwa jej wyborów.
 
-Kiedy działanie jest ryzykowne, do gry wchodzi mechanika:
-
-1. MG wybiera z katalogu akcję, a skrypt **wycenia** ją: podaje szansę, czas, hałas i skutek porażki.
-2. Skrypt **losuje** wynik. Nikt nie rzuca kośćmi.
-3. MG opowiada wynik **dokładnie** taki, jaki podał skrypt. Porażka ma realne skutki.
-
-Wszystko, co zajmuje czas, przechodzi przez skrypt, więc zegar gry, zmęczenie, głód, hałas i spotkania ze sztywnymi liczą się same. Nie ma „docierasz na miejsce” bez komendy.
-
 ## Co się liczy w tej grze
 
 **Czas, hałas i zasoby.** Postać to nie specjalista, tylko zwykły człowiek z bloku, który każdą rzecz umie zrobić średnio. O przeżyciu decyduje nie to, ile umie, tylko ile coś trwa, ile robi hałasu i co zużywa. Hałas ściąga sztywnych, a każdy dzień kosztuje wodę, jedzenie i sen.
@@ -36,8 +28,6 @@ Modele językowe mają skłonność do przypodobania się graczowi, a ostrzeżon
 - nie przerzuca rzutów i nie cofa wydarzeń (punkt Fartu, którym gracz może poprawić wynik o jeden stopień, nie jest przerzutem),
 - nie wymyśla losowych wyników ani nie zmienia stanu gry ręcznie. Robią to skrypty z folderu `Scripts/`.
 
-Prawdę w grze ustalają trzy źródła i nic poza nimi: **Manual** (świat i zasady), **skrypty i tabele** (każda losowość i zmiana stanu) oraz **scenariusz kampanii**, napisany przed startem i potem zamrożony. Jeśli odpowiedzi nie ma w żadnym z nich, rozstrzyga rzut 50/50 (`act.py los`). Przy sprzeczności pierwszeństwo ma Manual, potem scenariusz, potem tabele.
-
 ## Gracz i MG nie wiedzą tego samego
 
 Gracz czyta Manual, więc wie rzeczy, których postać w pierwszych dniach nie ma skąd znać, na przykład że ugryzienie nie zaraża i że każdy, kto umrze, wstaje. Postać i NPC wiedzą tylko to, co mogli zobaczyć i usłyszeć do danej godziny (zob. `Stiffs.md`, *Co wiedzą ludzie*). Pierwszej nocy nikt nie mówi „zarażony” ani „żywe trupy”: ugryzienie to wścieklizna, a zmarły to pijany, chory albo szalony człowiek.
@@ -51,11 +41,3 @@ Część gry jest ukryta przed graczem: scenariusz, ziarno losu bliskich i sąsi
 3. **Sesje.** Gra toczy się rundami opisanymi wyżej. Pierwsza noc jest najbardziej chaotyczna, bo świat dopiero uczy się, że zmarli wstają. Z każdym dniem wiedza rośnie, a zasoby maleją.
 4. **Zapis.** Kampania żyje w folderze `Campaigns/<kampania>/`. Stan zapisują wyłącznie skrypty, a MG prowadzi kronikę (`journal.md`), żeby po przerwie wrócić do gry w tym samym miejscu.
 
-## Co jest w Manualu i w jakiej kolejności czytać
-
-1. **`Game.md`** (ten plik): o co chodzi w grze.
-2. **`World.md`**: Polska wiosną 1990 roku i fakty historyczne, z których korzysta gra. Do nocy z 21 na 22 marca to historia, potem fikcja.
-3. **`Stiffs.md`**: sztywni, czyli jak działają zmarli, co wiedzą ludzie w kolejnych dniach, plotki i zasady prowadzenia sztywnych.
-4. **`Rules.md`**: pełna mechanika: czas, wycena i szanse, postać, ciało, nerwy, hałas, walka, pościg, skrypty.
-
-Pierwsze trzy pliki wystarczą, żeby zrozumieć świat i grę. `Rules.md` jest dłuższy i służy do sprawdzania, gdy gracz pyta o konkretną zasadę albo wycena wymaga wyjaśnienia.
