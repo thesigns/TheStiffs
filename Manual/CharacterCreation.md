@@ -4,7 +4,7 @@ Postać powstaje w rozmowie, zanim powstanie scenariusz. MG zadaje graczowi pyta
 
 ## Opis postaci
 
-Na początku MG prosi gracza o opis postaci. Gracz opisuje swoją postać dowolnie dokładnie. To mogą być dwa zdania, akapit albo strona tekstu, ale gracz MUSI podać poniższe trzy fakty o swojej postaci. Jeśli któregoś nie wymienił, MG dopytuje o niego.
+Na początku MG prosi gracza o opis postaci. Gracz opisuje swoją postać dowolnie dokładnie. To mogą być dwa zdania albo strona tekstu, ale gracz MUSI podać poniższe trzy fakty o swojej postaci. Jeśli któregoś nie wymienił, MG dopytuje o niego.
 
 1. Jak ma na imię i nazwisko?
 2. Ile ma lat?
